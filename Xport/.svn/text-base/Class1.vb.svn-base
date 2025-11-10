@@ -1,0 +1,141 @@
+﻿Imports System.String
+Imports System.IO
+Imports System.IO.Ports
+Imports Microsoft.VisualBasic
+Imports System.Windows.Forms.Control
+Imports Tao.OpenGl
+Imports Tao.Platform.Windows
+Imports Tao.FreeGlut
+Imports Tao.FreeGlut.Glut
+Imports System.Math
+Imports System.Windows.Forms
+Imports System.Windows
+Imports System.Text.RegularExpressions
+Imports System.Runtime.InteropServices
+Imports System.Drawing
+Public Class my_PB1
+    Inherits System.Windows.Forms.PictureBox
+    Public Sub dbl()
+        Me.DoubleBuffered = False
+    End Sub
+    Protected Overrides Sub OnPaint(ByVal pe As System.Windows.Forms.PaintEventArgs)
+        frmMain.DrawScene()
+        If Me.Width <> frmMain.Splitter.SplitterDistance - 15 Then
+            Return
+        End If
+        MyBase.OnPaint(pe)
+    End Sub
+End Class
+
+Public Class RTB1_
+    Inherits RichTextBox
+    Private rt As New RichTextBox
+    Private cnt As Integer = 0
+    Public _Paint As Boolean = True
+    Public _scrolling As Boolean = False
+    Private old_SelectionStart As Integer
+    Private old_SelectionLength As Integer
+
+    Protected Overrides Sub WndProc(ByRef m As System.Windows.Forms.Message)
+        '  Console.WriteLine(String.Format("Msg {0:X} - lParam {1:X} - WParam {2:X}", m.Msg, m.WParam, m.WParam) + vbCrLf)
+        MyBase.WndProc(m)
+    End Sub
+
+
+    Protected Overrides Sub OnMouseMove(ByVal e As System.Windows.Forms.MouseEventArgs)
+        If e.X < 8 Then
+            If Me.Cursor <> Cursors.Arrow Then
+                Me.Cursor = Cursors.Arrow
+            End If
+
+        Else
+            If Me.Cursor <> Cursors.IBeam Then
+                Me.Cursor = Cursors.IBeam
+            End If
+        End If
+
+        MyBase.OnMouseMove(e)
+    End Sub
+
+    Protected Overrides Sub OnMouseDown(ByVal e As System.Windows.Forms.MouseEventArgs)
+        frmMain._SELECTED = 1
+        MyBase.OnMouseDown(e)
+    End Sub
+    Protected Overrides Sub OnMouseClick(ByVal e As System.Windows.Forms.MouseEventArgs)
+        frmMain.RTB1_MouseClick(Me, e)
+        MyBase.OnMouseClick(e)
+    End Sub
+
+
+    Protected Overrides Sub OnSelectionChanged(ByVal e As System.EventArgs)
+        frmMain.RTB1_SelectionChanged(Me, e)
+        MyBase.OnSelectionChanged(e)
+    End Sub
+
+    Protected Overrides Sub OnTextChanged(ByVal e As System.EventArgs)
+        frmMain.RTB1_TextChanged(Me, e)
+        MyBase.OnTextChanged(e)
+    End Sub
+
+    Protected Overrides Sub OnKeyPress(ByVal e As System.Windows.Forms.KeyPressEventArgs)
+        Dim c As Char = e.KeyChar
+        e.KeyChar = Char.ToUpper(c)
+        MyBase.OnKeyPress(e)
+    End Sub
+
+End Class
+
+Public Class arc_set
+    Public x As Single
+    Public y As Single
+    Public z As Single
+    Public radius As Single
+    Public hoc As Single
+    Public angle As Single
+End Class
+Public Class arc_class
+    Public blocks() As String
+    Public block_count As Integer
+    Public start_x As Single
+    Public start_y As Single
+    Public start_z As Single
+    Public arc_started As Boolean = False
+    Public xc As Single
+    Public yc As Single
+    Public zc As Single
+    Public x_running As Single
+    Public y_running As Single
+    Public z_running As Single
+    Public running_count As Integer
+    Public direction As String
+    Public radius As Single = 0
+    Public running_radius As Single = 0
+    Public x_sum As Single
+    Public y_sum As Single
+    Public z_sum As Single
+    Public rdata() As Single
+    Public x_data() As Single
+    Public y_data() As Single
+    Public z_data() As Single
+    Public old_fms As Single
+    Public start_angle As Single
+    Public end_angle As Single
+    Public x_off As Single
+    Public y_off As Single
+    Public str
+End Class
+
+
+Public Class Vertex_data
+    Public x1, y1, z1 As Single
+    Public x2, y2, z2 As Single
+    Public x3, y3, z3 As Single
+    Public nx, ny, nz As Single
+
+End Class
+
+
+
+
+
+

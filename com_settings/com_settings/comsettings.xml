@@ -1,0 +1,23 @@
+<?xml version="1.0" standalone="yes"?>
+<DocumentElement>
+  <port_settings>
+    <Name>Fanuc 21i</Name>
+    <Port>COM1</Port>
+    <Baud>9600</Baud>
+    <Data_x0020_Bits>7</Data_x0020_Bits>
+    <Stop_x0020_Bits>2</Stop_x0020_Bits>
+    <Parity>Even</Parity>
+    <Handshake>Xon/Xoff</Handshake>
+    <_x0028_..._x0029_>True</_x0028_..._x0029_>
+  </port_settings>
+  <port_settings>
+    <Name>Fanuc 18i</Name>
+    <Port>COM1</Port>
+    <Baud>9600</Baud>
+    <Data_x0020_Bits>7</Data_x0020_Bits>
+    <Stop_x0020_Bits>2</Stop_x0020_Bits>
+    <Parity>Even</Parity>
+    <Handshake>Xon/Xoff</Handshake>
+    <_x0028_..._x0029_>True</_x0028_..._x0029_>
+  </port_settings>
+</DocumentElement>

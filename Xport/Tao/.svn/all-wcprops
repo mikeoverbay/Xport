@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 43
+/svn/boincdotnet/!svn/ver/2/trunk/Xport/Tao
+END
+Tao.OpenGl.dll
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/boincdotnet/!svn/ver/2/trunk/Xport/Tao/Tao.OpenGl.dll
+END
+Tao.OpenGl.xml
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/boincdotnet/!svn/ver/2/trunk/Xport/Tao/Tao.OpenGl.xml
+END
+Tao.FreeGlut.dll
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/boincdotnet/!svn/ver/2/trunk/Xport/Tao/Tao.FreeGlut.dll
+END
+Tao.Platform.Windows.dll
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/boincdotnet/!svn/ver/2/trunk/Xport/Tao/Tao.Platform.Windows.dll
+END
+Tao.FreeGlut.xml
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/boincdotnet/!svn/ver/2/trunk/Xport/Tao/Tao.FreeGlut.xml
+END
+Tao.Platform.Windows.xml
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/boincdotnet/!svn/ver/2/trunk/Xport/Tao/Tao.Platform.Windows.xml
+END

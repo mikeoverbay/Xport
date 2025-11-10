@@ -1,0 +1,112 @@
+﻿Imports System.Text.RegularExpressions
+Imports System.Windows.Forms
+Imports System.Runtime.InteropServices
+Imports System.IO
+
+
+Module Global_vars
+    'RTB1 scroll stuff
+    Public Delegate Function wnd(ByVal hWnd As Long, ByVal Msg As Long, ByRef wParam As Long, ByRef lParam As Long) As Long
+    Public rtfheader As String = ""
+
+    Public file_name As String = ""
+    Public file_root As String = ""
+    Public lPrevProc As Long
+  
+    Public find_string As String = ""
+    Public replace_string As String = ""
+    Public find_replace As Boolean = False
+    Public find_position As Integer
+    Public replace_count As Integer = 0
+
+    Public inch_metric As Boolean = True
+
+    'Public TheBuffer As New _TheBuffer
+    'Public Table_Lookup As New _Table_LookUp
+    'Public _Regex_1 As New Regex("[de-klmnqrstxyz(0-9)(0-9)(0-9)?.(0-9)(0-9)(0-9)(0-9)?^0-9\f\t\v]", RegexOptions.Compiled Or RegexOptions.IgnoreCase)
+    ' cnc setting strings
+    Public cnc_length_offset As String = "H"
+    Public _Loading As Boolean = False
+    '-----------------------
+    Public Texture(1) As UInt32
+    Public first_step As Boolean = True
+    Public single_step As Boolean = False
+    Public step_pos As ULong = 1
+    Public eye_target As Boolean = False
+    Public draw_ball As Boolean = False
+    Public draw_presistent_selection As Boolean = False
+    Public ambient_level As Single = 0.4F
+    Public screen_prompts As Boolean = False
+    Public show_left As Boolean = False
+    Public show_right As Boolean = False
+    Public z_move As Boolean = False
+    Public move_mod As Boolean = False
+    Public _3D As Boolean = False
+    Public gl_lighting As Boolean = False
+    Public Block_Close As Boolean = False
+    Public isInitiated As Boolean = False
+    Public form_height As Integer
+    Public form_width As Integer
+    Public form_client_size As System.Drawing.Size
+    Public draw_grid As Boolean = False
+    Public NO_Zs As Boolean = False
+    Public NO_RAPIDs As Boolean = False
+    '--------------
+    Public pgm_lines() As String
+    Public lookup() As lk_up
+    Public presistent() As line_d
+    Public draw_data() As line_d
+    Public offset_x(100) As Decimal
+    Public offset_y(100) As Decimal
+    Public Const _SEND As Integer = 0
+    Public Const _READ As Integer = 1
+    Public SP As New SerialPort
+    Public x_max As Single = -10000
+    Public x_min As Single = 10000
+    Public y_min As Single = -10000
+    Public y_max As Single = 10000
+    Public z_max As Single = -10000
+    Public z_min As Single = 10000
+    Public eye_x As Single = 0.0
+    Public eye_y As Single = 0.0
+    Public eye_z As Single = 0.0
+    Public look_radius As Single = 10.0
+    Public x_center As Single
+    Public y_center As Single
+    Public z_center As Single
+    Public Look_Y_angle As Single
+    Public Look_X_angle As Single
+    Public Look_Z_angle As Single
+    Public Look_at_X As Single = 0
+    Public Look_at_Y As Single = 0
+    Public Look_at_Z As Single = 0
+    Public cam_x As Single = 0
+    Public cam_y As Single = 0
+    Public cam_z As Single = -5
+    Public move_cam_z As Boolean = False
+    Public _STARTED As Boolean = False
+    Public M_MOVE As Boolean = False
+    Public M_DOWN As Boolean = False
+    Public FM_DOWN As Boolean = False
+    Public size_L As Boolean
+    Public size_R As Boolean
+    Public size_T As Boolean
+    Public size_B As Boolean
+
+    Public mouse As Point
+
+    ' Class UndoElement for RTB1 undo functions
+    Public Class UndoElement
+        Public selectionstart As Long
+        Public TextLen As Long
+        Public Text As String
+    End Class
+    Public trapUndo As Boolean
+    Public UndoStack As New Collection
+    Public RedoStack As New Collection
+    ' -----------------------------------
+    Public Startup_Path As String
+    Public near_clip_plane As Single
+    Public step_time As Integer = 100
+
+End Module

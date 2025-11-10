@@ -1,0 +1,139 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Xport.Xport.General" Collapsed="true">
+    <Position X="2.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAABAAAAAAAAAAAAAAAAAAAAAIAAAAAAAEAAAAAA=</HashCode>
+      <FileName>APIs.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Xport.Xport.RichEditControl" Collapsed="true">
+    <Position X="2.25" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EBWCAoBGXM4IAwAMZREThgEABxZgASAEIJEAIpUBaHA=</HashCode>
+      <FileName>APIs.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Xport.my_Btn" Collapsed="true">
+    <Position X="4" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAIAAAAAAAAAABAAAAAAAAAAAAAIAAAAAACgAA=</HashCode>
+      <FileName>buttons.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Xport.my_Frm_Btn" Collapsed="true">
+    <Position X="5.75" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAIAAAAAAAAAABAAAAAAAAAAAAEIAAAAAACgAA=</HashCode>
+      <FileName>buttons.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Xport.my_Sqr_Btn" Collapsed="true">
+    <Position X="4" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAIAAAAAAAAAABAAAAAAAAAAAAEIAAAAAADgAA=</HashCode>
+      <FileName>buttons.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Xport.my_spacer" Collapsed="true">
+    <Position X="2.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAA=</HashCode>
+      <FileName>buttons.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Xport.buttons" Collapsed="true">
+    <Position X="4" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAAAAAAACAAAACAAAAAAAAAAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Xport.my_PB1" Collapsed="true">
+    <Position X="0.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQCAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Class1.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Xport.arc_set" Collapsed="true">
+    <Position X="2.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAACAAAAAAAAAAAgAAAAAAAAAAAAABgAQBAAAA=</HashCode>
+      <FileName>Class1.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Xport.arc_class" Collapsed="true">
+    <Position X="0.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>aIAAhIAACCgAIAAAAAAAQBAA4AAwAgAwAAAAAQwABAA=</HashCode>
+      <FileName>Class1.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Xport.filter" Collapsed="true">
+    <Position X="5.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>iSAAgQUAkCgKAgqAogymIDDmgEICACAEQBGFAoCBhbI=</HashCode>
+      <FileName>filter.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Xport.frmMain" Collapsed="true">
+    <Position X="0.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>o3m7sdI19Tnkr8zkonaiML/r3UcrVnxynyb5162nZHs=</HashCode>
+      <FileName>frmMain.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Xport.My.MyApplication" Collapsed="true">
+    <Position X="5.75" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Xport.My.MySettings" Collapsed="true">
+    <Position X="0.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QBqCFwAAACEEAAUAABAAIwAABQAhAQgACAAACQAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Module Name="Xport.classes" Collapsed="true">
+    <Position X="0.5" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>class.vb</FileName>
+    </TypeIdentifier>
+  </Module>
+  <Module Name="Xport.Global_vars" Collapsed="true">
+    <Position X="2.25" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>eQBGAyAhFCVIgAAFIAAgBHAgALCASiEDJANEhAAAgAA=</HashCode>
+      <FileName>Global_vars.vb</FileName>
+    </TypeIdentifier>
+  </Module>
+  <Module Name="Xport.ModMain" Collapsed="true">
+    <Position X="4" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ModMain.vb</FileName>
+    </TypeIdentifier>
+  </Module>
+  <Module Name="Xport.solids" Collapsed="true">
+    <Position X="2.25" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>solids.vb</FileName>
+    </TypeIdentifier>
+  </Module>
+  <Module Name="Xport.My.MySettingsProperty" Collapsed="true">
+    <Position X="5.75" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Module>
+  <Module Name="Xport.My.Resources.Resources" Collapsed="true">
+    <Position X="0.5" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>wgKSsAAnEVIADAJUMAkFUDGAgQYQEqQCADgEAoAgAoE=</HashCode>
+    </TypeIdentifier>
+  </Module>
+  <Font Name="Tahoma" Size="8.25" />
+</ClassDiagram>

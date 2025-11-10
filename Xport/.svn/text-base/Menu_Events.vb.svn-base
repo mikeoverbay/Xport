@@ -1,0 +1,535 @@
+﻿Imports Tao.OpenGl
+Module Menu_Events
+    Dim busy As Boolean = False
+    Public Sub _btn_process()
+        frmMain.FILE_PROCESS_MODE = True
+        Application.DoEvents()
+        Application.DoEvents()
+        Application.DoEvents()
+        frmMain.btn_process.Enabled = False
+        frmfilter.TopMost = True
+        If Not un_docked_edit.Visible Then
+            frmfilter.Location = New Point(frmMain.Location.X + frmMain.Splitter.Panel2.Location.X + (frmMain.Splitter.Panel2.Width / 2) - (frmfilter.Width / 2), _
+                                         frmMain.Location.Y + frmMain.Splitter.Panel2.Location.Y + (frmMain.Splitter.Panel2.Height / 2) - (frmfilter.Height / 2))
+        Else
+            frmfilter.Location = New Point(un_docked_edit.Location.X + (un_docked_edit.Width / 2) - (frmfilter.Width / 2), _
+                             un_docked_edit.Location.Y + (un_docked_edit.Height / 2) - (frmfilter.Height / 2))
+
+        End If
+        frmfilter.Show(frmMain)
+        frmMain.DrawScene()
+        frmMain.RTB1.Focus()
+    End Sub
+
+    Public Sub _btn_new()
+        'new file
+
+        If frmMain.btn_save_as.Enabled Then
+            Select Case MsgBox("Save Changes?", MsgBoxStyle.YesNoCancel, "Save?")
+                Case MsgBoxResult.Yes
+                    Try
+                        System.IO.File.WriteAllText(frmMain.path, frmMain.RTB1.Text)
+                    Catch ex As Exception
+                        MsgBox("Error.. " & vbCrLf & ex.Message, MsgBoxStyle.Exclamation, "File Read Error..")
+                        Return
+                    End Try
+                Case MsgBoxResult.Cancel
+                    Return
+                Case MsgBoxResult.No
+            End Select
+
+        End If
+        frmMain.RTB1.Text = ""
+        frmMain.path = ""
+        frmMain.delete_stl()
+        frmMain.clear_selection()
+        frmMain.clear_arrays()
+        frmMain.make_plotlist()
+        frmMain.draw_all()
+        frmMain.disable_btns()
+        frmMain.DrawScene()
+    End Sub
+
+    Public Sub _btn_open()
+        zoom_window.TopMost = False
+        frmMain.OpenFileDialog1.FilterIndex = My.Settings.open1_fliter_index
+        frmMain.FILE_PROCESS_MODE = False
+
+        frmMain.make_filter()
+        If frmMain.OpenFileDialog1.ShowDialog(frmMain) = DialogResult.OK Then
+            draw_presistent_selection = False ' clear
+            _Loading = True
+            ReDim presistent(1)
+            frmMain.clear_selection()
+            zoom_window.TopMost = True
+            frmMain.open_file()
+            If frmMain.codechop_loaded Then
+                frmMain.delete_stl()
+            End If
+        Else
+            _Loading = False
+            zoom_window.TopMost = True
+
+        End If
+        My.Settings.open1_fliter_index = frmMain.OpenFileDialog1.FilterIndex
+        frmMain.DrawScene()
+        'End If
+
+    End Sub
+
+    Public Sub _btn_save()
+        frmMain.make_filter()
+        frmMain.SaveFileDialog1.FileName = file_root + file_name
+        Try
+            Dim s As String
+            s = ""
+            s = frmMain.RTB1.Text
+            s = Microsoft.VisualBasic.Replace(s, vbLf, vbCrLf)
+            System.IO.File.WriteAllText(file_root + file_name, s)
+        Catch ex As Exception
+            MsgBox("Error.. " & vbCrLf & ex.Message, MsgBoxStyle.Exclamation, "File Read Error..")
+            Return
+        End Try
+
+    End Sub
+
+    Public Sub _btn_save_as()
+        frmMain.make_filter()
+        frmMain.SaveFileDialog1.FileName = file_root + file_name
+        zoom_window.TopMost = False
+        If frmMain.SaveFileDialog1.ShowDialog(frmMain) = Windows.Forms.DialogResult.OK Then
+            file_name = frmMain.SaveFileDialog1.FileName
+            Try
+                Dim s As String
+                s = ""
+                s = frmMain.RTB1.Text
+                s = Microsoft.VisualBasic.Replace(s, vbLf, vbCrLf)
+                System.IO.File.WriteAllText(file_name, s)
+            Catch ex As Exception
+                MsgBox("Error.. " & vbCrLf & ex.Message, MsgBoxStyle.Exclamation, "File Write Error..")
+                Return
+            End Try
+            frmMain.Text = frmMain.App_Name + " : " + frmMain.get_filename()
+        End If
+        zoom_window.TopMost = True
+
+    End Sub
+
+    Public Sub _btn_copy()
+        If frmMain.RTB1.SelectedText.Length > 0 Then
+            Clipboard.SetText(frmMain.RTB1.SelectedText)
+        End If
+
+    End Sub
+
+    Public Sub _btn_paste()
+        If Clipboard.GetText.Length > 0 Then
+            frmMain.RTB1.Paste()
+        End If
+
+    End Sub
+
+    Public Sub _btn_delete()
+        If frmMain.RTB1.SelectedText.Length > 0 Then
+            frmMain.RTB1.SelectedText = ""
+        End If
+
+    End Sub
+
+    Public Sub _btn_cut()
+        If frmMain.RTB1.SelectedText.Length > 0 Then
+            Clipboard.SetText(frmMain.RTB1.SelectedText)
+            frmMain.RTB1.SelectedText = ""
+        End If
+
+    End Sub
+
+    Public Sub _btn_undo()
+        frmMain.Undo()
+    End Sub
+
+    Public Sub _btn_redo()
+        frmMain.Redo()
+    End Sub
+
+    Public Sub _btn_find()
+        frmMain.btn_find.Enabled = False
+        frmMain.btn_find_next.Enabled = False
+        frmMain.btn_replace.Enabled = False
+        find_replace = False
+        Find.Show(frmMain)
+        If Not un_docked_edit.Visible Then
+            Find.Location = New Point(frmMain.Location.X + frmMain.Splitter.Panel2.Location.X + (frmMain.Splitter.Panel2.Width / 2) - (Find.Width / 2), _
+                                         frmMain.Location.Y + frmMain.Splitter.Panel2.Location.Y + (frmMain.Splitter.Panel2.Height / 2) - (Find.Height / 2))
+        Else
+            Find.Location = New Point(un_docked_edit.Location.X + (un_docked_edit.Width / 2) - (Find.Width / 2), _
+                             un_docked_edit.Location.Y + (un_docked_edit.Height / 2) - (Find.Height / 2))
+
+        End If
+        frmMain.RTB1.Invalidate()
+        frmMain.RTB1.Update()
+        frmMain.RTB1.Focus()
+    End Sub
+
+    Public Sub _btn_find_next()
+        If find_string.Length = 0 Then
+            _btn_find()
+        Else
+            frmMain.btn_find_next.Enabled = False
+            find_text()
+            frmMain.btn_find_next.Enabled = True
+            frmMain.RTB1.Focus()
+        End If
+    End Sub
+
+    Public Sub _btn_replace()
+        find_replace = True
+        frmMain.btn_find.Enabled = False
+        frmMain.btn_find_next.Enabled = False
+        frmMain.btn_replace.Enabled = False
+        Find.Show(frmMain)
+        If Not un_docked_edit.Visible Then
+            Find.Location = New Point(frmMain.Location.X + frmMain.Splitter.Panel2.Location.X + (frmMain.Splitter.Panel2.Width / 2) - (Find.Width / 2), _
+                                         frmMain.Location.Y + frmMain.Splitter.Panel2.Location.Y + (frmMain.Splitter.Panel2.Height / 2) - (Find.Height / 2))
+        Else
+            Find.Location = New Point(un_docked_edit.Location.X + (un_docked_edit.Width / 2) - (Find.Width / 2), _
+                             un_docked_edit.Location.Y + (un_docked_edit.Height / 2) - (Find.Height / 2))
+
+        End If
+        frmMain.RTB1.Invalidate()
+        frmMain.RTB1.Invalidate()
+        frmMain.RTB1.Update()
+        frmMain.RTB1.Focus()
+    End Sub
+
+    Public Sub _btn_renum()
+        frmMain.btn_renum.Enabled = False
+        frmMain.btn_del_num.Enabled = False
+        Re_number.Show()
+        If Not un_docked_edit.Visible Then
+            Re_number.Location = New Point(frmMain.Location.X + frmMain.Splitter.Panel2.Location.X + (frmMain.Splitter.Panel2.Width / 2) - (Re_number.Width / 2), _
+                                         frmMain.Location.Y + frmMain.Splitter.Panel2.Location.Y + (frmMain.Splitter.Panel2.Height / 2) - (Re_number.Height / 2))
+        Else
+            Re_number.Location = New Point(un_docked_edit.Location.X + (un_docked_edit.Width / 2) - (Re_number.Width / 2), _
+                             un_docked_edit.Location.Y + (un_docked_edit.Height / 2) - (Re_number.Height / 2))
+
+        End If
+        frmMain.RTB1.Invalidate()
+        frmMain.RTB1.Update()
+    End Sub
+
+    Public Sub _btn_del_num()
+        frmMain.btn_renum.Enabled = False
+        frmMain.btn_del_num.Enabled = False
+        frmMain.strip_line_numbers()
+        frmMain.btn_renum.Enabled = True
+        frmMain.btn_del_num.Enabled = True
+        frmMain.RTB1.Invalidate()
+        frmMain.RTB1.Update()
+    End Sub
+    'modal subs
+    Public Sub _btn_show_plot()
+        If frmMain.btn_show_plot.Checked Then
+            frmMain.btn_split_direction.Enabled = True
+            frmMain.Splitter.Panel2Collapsed = False
+            frmMain.RTB1.Width = frmMain.Splitter.Panel1.Width - 15
+        Else
+            frmMain.btn_split_direction.Enabled = False
+            frmMain.Splitter.Panel2Collapsed = True
+            frmMain.RTB1.Width = frmMain.Splitter.Panel1.Width - 15
+        End If
+        frmMain.DrawScene()
+    End Sub
+
+    Public Sub _btn_draw_grid()
+        If frmMain.btn_draw_grid.Checked Then
+            draw_grid = True
+        Else
+            draw_grid = False
+        End If
+        frmMain.DrawScene()
+    End Sub
+    Public Sub _btn_draw_rapids()
+        If frmMain.btn_draw_rapids.Checked Then
+            NO_RAPIDs = False
+        Else
+            NO_RAPIDs = True
+        End If
+        frmMain.make_plotlist()
+        frmMain.DrawScene()
+    End Sub
+    Public Sub _btn_show_z_moves()
+        If frmMain.btn_show_z_moves.Checked Then
+            NO_Zs = False
+        Else
+            NO_Zs = True
+        End If
+        frmMain.make_plotlist()
+        frmMain.DrawScene()
+    End Sub
+    Public Sub _btn_show_points()
+        If frmMain.btn_show_points.Checked Then
+            frmMain.draw_points = True
+        Else
+            frmMain.draw_points = False
+        End If
+        frmMain.make_plotlist()
+        frmMain.DrawScene()
+    End Sub
+    Public Sub _btn_draw_3d()
+        If frmMain.btn_draw_3d.Checked Then
+            _3D = True
+        Else
+            _3D = False
+        End If
+        frmMain.DrawScene()
+    End Sub
+
+    Public Sub _btn_auto_center()
+        If frmMain.btn_auto_center.Checked Then
+            frmMain._auto_center = True
+            frmMain._center_selected.Checked = True
+        Else
+            frmMain._auto_center = False
+            frmMain._center_selected.Checked = False
+        End If
+        frmMain.DrawScene()
+    End Sub
+
+    Public Sub _btn_draw_eye_center()
+        If frmMain.btn_draw_eye_center.Checked Then
+            eye_target = True
+        Else
+            eye_target = False
+        End If
+        frmMain.DrawScene()
+    End Sub
+
+    Public Sub _btn_split_direction()
+        If frmMain.btn_split_direction.Checked Then
+            frmMain.btn_split_direction.Image = My.Resources.__layout_v
+            frmMain.Splitter.Orientation = Orientation.Horizontal
+            frmMain.ResizeGL()
+        Else
+            frmMain.btn_split_direction.Image = My.Resources.__layout_h
+            frmMain.Splitter.Orientation = Orientation.Vertical
+            frmMain.ResizeGL()
+        End If
+        frmMain.DrawScene()
+    End Sub
+    Public Sub _btn_draw_highlighted()
+        If frmMain.btn_draw_highlighted.Checked Then
+            draw_presistent_selection = True
+            frmMain._plot_selected.Checked = True
+        Else
+            draw_presistent_selection = False
+            frmMain._plot_selected.Checked = False
+        End If
+        frmMain.DrawScene()
+    End Sub
+    Public Sub _btn_zoom()
+        If frmMain.btn_zoom.Checked Then
+            zoom_window.Visible = True
+        Else
+            zoom_window.Visible = False
+        End If
+    End Sub
+    Public Sub _btn_free_spin()
+        If frmMain.btn_free_spin.Checked Then
+            frmMain.Timer1.Enabled = True
+            frmMain._R = 0.0025
+        Else
+            frmMain.Timer1.Enabled = False
+            frmMain._R = 0.0
+        End If
+        frmMain.DrawScene()
+    End Sub
+    Public Sub _btn_com_con()
+        Diagnostics.Process.Start(Startup_Path + "\com_console.exe")
+        frmMain.btn_com_con.Checked = False
+    End Sub
+    'plot_toolbar buttons subs
+    Public Sub _btn_rewind()
+        busy = False
+        frmMain.btn_step_back.Timer_.Enabled = False
+        frmMain.btn_step_forward.Timer_.Enabled = False
+        frmMain.btn_step_forward.reset()
+        frmMain.btn_step_back.reset()
+        first_step = True
+        step_pos = 0
+        frmMain._SELECTED = 0
+        single_step = True
+        frmMain.DrawScene()
+
+    End Sub
+    Public Sub _btn_plot_all()
+        busy = False
+        frmMain.btn_step_back.Timer_.Enabled = False
+        frmMain.btn_step_forward.Timer_.Enabled = False
+        frmMain.btn_step_forward.reset()
+        frmMain.btn_step_back.reset()
+        single_step = False
+        first_step = True
+        frmMain.draw_all()
+        frmMain.RTB1.Focus()
+    End Sub
+
+
+    Public Sub _btn_step_back()
+        If busy Then
+            Return
+        End If
+        busy = True
+        Application.DoEvents()
+        Application.DoEvents()
+        Application.DoEvents()
+        If step_pos <= frmMain._SELECTED Then
+            step_pos = frmMain._SELECTED
+            frmMain.btn_step_back.reset()
+            busy = False
+            Return
+        End If
+        If first_step Then
+            single_step = True
+            step_pos = frmMain._SELECTED
+            first_step = False
+        End If
+        'frmMain.DrawScene()
+        If step_pos = 0 Then Return
+        If frmMain._auto_center Then
+            Try
+                eye_x = draw_data(step_pos).ex
+                eye_z = -draw_data(step_pos).ey
+                eye_y = draw_data(step_pos).ez
+            Catch ex As Exception
+            End Try
+        End If
+        step_pos -= 1
+        If Not frmMain.btn_step_back.locked Then
+            select_txt(step_pos)
+        End If
+        Application.DoEvents()
+        Application.DoEvents()
+        Application.DoEvents()
+        frmMain.DrawScene()
+        frmMain.RTB1.Focus()
+        busy = False
+    End Sub
+    Public Sub _btn_step_forward()
+        If busy Then
+            Return
+        End If
+        busy = True
+        Application.DoEvents()
+        Application.DoEvents()
+        Application.DoEvents()
+        If first_step Then
+            single_step = True
+            step_pos = frmMain._SELECTED
+            first_step = False
+        End If
+        step_pos += 1
+        If step_pos >= draw_data.Length - 1 Then ' stop auto repete if its on
+            frmMain.btn_step_forward.Timer_.Enabled = False
+            frmMain.btn_step_forward.reset()
+        End If
+        If frmMain._auto_center Then
+            Try
+                eye_x = draw_data(step_pos).ex
+                eye_z = -draw_data(step_pos).ey
+                eye_y = draw_data(step_pos).ez
+            Catch ex As Exception
+            End Try
+        End If
+        If Not frmMain.btn_step_forward.locked Then
+            select_txt(step_pos)
+        End If
+        Application.DoEvents()
+        Application.DoEvents()
+        Application.DoEvents()
+        frmMain.DrawScene()
+        frmMain.RTB1.Focus()
+        busy = False
+    End Sub
+    Public Sub _btn_light()
+        Lighting.ShowDialog()
+        'set light level
+        frmMain.DrawScene()
+    End Sub
+    Public Sub _btn_solids()
+        frmMain.btn_solids.Enabled = False
+        If frmMain.OpenFileDialog2.ShowDialog = DialogResult.OK Then
+            If frmMain.codechop_loaded Then
+                frmMain.delete_stl()
+            End If
+            frmMain.build_stl(frmMain.OpenFileDialog2.FileName)
+        End If
+        frmMain.btn_solids.Enabled = True
+    End Sub
+
+    'subs
+    Private Sub find_text()
+        ' Dim st As New StringBuilder
+        With frmMain
+            Dim old_pos = .RTB1.SelectionStart
+            '   st.Length = 0
+            '
+            Dim lines = .RTB1.Text.Split(ChrW(10))
+            Dim pos As UInteger = 0
+            Dim sel_start, sel_end As Integer
+            Dim ts, te, fs As String
+            If lines.Length = 0 Then
+                frmMain.btn_find_next.Enabled = True
+                Return
+            End If
+            ' .RTB1.SuspendLayout()
+            sel_end = find_string.Length
+
+            For pos = find_position To lines.Length - 1
+                Dim ln = lines(pos)
+                fs = ln
+                If ln.Length = 0 Then GoTo skip ' not on this line
+                sel_start = InStr(ln, find_string)
+                If sel_start = 0 Then GoTo skip
+
+
+                ts = Microsoft.VisualBasic.Mid(ln, 1, sel_start)
+                te = Microsoft.VisualBasic.Mid(ln, sel_start + 1 + sel_end + 1)
+                Dim s As UInteger = .RTB1.GetFirstCharIndexFromLine(pos)
+                .RTB1.SelectionStart = (s + sel_start - 1)
+                .RTB1.SelectionLength = sel_end
+                .RTB1.ScrollToCaret()
+                GoTo done
+skip:
+                Application.DoEvents()
+                ' st.Append(fs + vbCrLf)
+                If pos >= lines.Length Then
+                    MsgBox("End Of File Reached...", MsgBoxStyle.OkOnly, "Search Completed")
+                    find_position = 0
+                    GoTo done
+                End If
+            Next
+done:
+            Application.DoEvents()
+            '.RTB1.Text = st.ToString
+            find_position = pos + 1
+            If pos >= lines.Length Then
+                MsgBox("End Of File Reached...", MsgBoxStyle.OkOnly, "Search Completed")
+                find_position = 0
+            End If
+
+        End With
+        ' frmMain.Focus()
+    End Sub
+    Private Sub select_txt(ByVal selected As Integer)
+        Try
+            Dim text_pnt As Integer = draw_data(selected).text_pnt
+            Dim loc As Integer = frmMain.RTB1.GetFirstCharIndexFromLine(text_pnt)
+            Dim e_loc As Integer = frmMain.RTB1.GetFirstCharIndexFromLine(text_pnt + 1)
+
+            frmMain.RTB1.Select(loc, e_loc - loc - 1)
+        Catch ex As Exception
+
+        End Try
+    End Sub
+End Module

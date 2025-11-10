@@ -1,0 +1,169 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<configuration>
+    <configSections>
+        <sectionGroup name="userSettings" type="System.Configuration.UserSettingsGroup, System, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" >
+            <section name="CodeChop.My.MySettings" type="System.Configuration.ClientSettingsSection, System, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" allowExeDefinition="MachineToLocalUser" requirePermission="false" />
+        </sectionGroup>
+    </configSections>
+    <system.diagnostics>
+        <sources>
+            <!-- This section defines the logging configuration for My.Application.Log -->
+            <source name="DefaultSource" switchName="DefaultSwitch">
+                <listeners>
+                    <add name="FileLog"/>
+                    <!-- Uncomment the below section to write to the Application Event Log -->
+                    <!--<add name="EventLog"/>-->
+                </listeners>
+            </source>
+        </sources>
+        <switches>
+            <add name="DefaultSwitch" value="Information" />
+        </switches>
+        <sharedListeners>
+            <add name="FileLog"
+                 type="Microsoft.VisualBasic.Logging.FileLogTraceListener, Microsoft.VisualBasic, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL"
+                 initializeData="FileLogWriter"/>
+            <!-- Uncomment the below section and replace APPLICATION_NAME with the name of your application to write to the Application Event Log -->
+            <!--<add name="EventLog" type="System.Diagnostics.EventLogTraceListener" initializeData="APPLICATION_NAME"/> -->
+        </sharedListeners>
+    </system.diagnostics>
+    <userSettings>
+        <CodeChop.My.MySettings>
+            <setting name="port" serializeAs="String">
+                <value />
+            </setting>
+            <setting name="baud" serializeAs="String">
+                <value>9600</value>
+            </setting>
+            <setting name="bits" serializeAs="String">
+                <value>8</value>
+            </setting>
+            <setting name="parity" serializeAs="String">
+                <value>Mark</value>
+            </setting>
+            <setting name="stop_bits" serializeAs="String">
+                <value>2</value>
+            </setting>
+            <setting name="xfer_mode" serializeAs="String">
+                <value>Xon/Xoff</value>
+            </setting>
+            <setting name="file_name" serializeAs="String">
+                <value />
+            </setting>
+            <setting name="main_location" serializeAs="String">
+                <value>300, 300</value>
+            </setting>
+            <setting name="main_client_size" serializeAs="String">
+                <value>800, 566</value>
+            </setting>
+            <setting name="textbox_size" serializeAs="String">
+                <value>531, 408</value>
+            </setting>
+            <setting name="tb_text_size" serializeAs="String">
+                <value>12</value>
+            </setting>
+            <setting name="Where_Main_Is" serializeAs="String">
+                <value>CenterScreen</value>
+            </setting>
+            <setting name="hide_z" serializeAs="String">
+                <value>False</value>
+            </setting>
+            <setting name="hide_rapid" serializeAs="String">
+                <value>False</value>
+            </setting>
+            <setting name="show_grid" serializeAs="String">
+                <value>True</value>
+            </setting>
+            <setting name="render_3d" serializeAs="String">
+                <value>False</value>
+            </setting>
+            <setting name="gl_lighting" serializeAs="String">
+                <value>True</value>
+            </setting>
+            <setting name="screen_prompts" serializeAs="String">
+                <value>False</value>
+            </setting>
+            <setting name="f_open_directory" serializeAs="String">
+                <value />
+            </setting>
+            <setting name="p2_collapsed" serializeAs="String">
+                <value>False</value>
+            </setting>
+            <setting name="main_splitter_p2_collapsed" serializeAs="String">
+                <value>False</value>
+            </setting>
+            <setting name="grid_level" serializeAs="String">
+                <value>.5</value>
+            </setting>
+            <setting name="ambient" serializeAs="String">
+                <value>0.8</value>
+            </setting>
+            <setting name="main_split_distance" serializeAs="String">
+                <value>318</value>
+            </setting>
+            <setting name="open1_fliter_index" serializeAs="String">
+                <value>1</value>
+            </setting>
+            <setting name="open2_filter_index" serializeAs="String">
+                <value>1</value>
+            </setting>
+            <setting name="open2_init_directory" serializeAs="String">
+                <value />
+            </setting>
+            <setting name="file_name_2" serializeAs="String">
+                <value />
+            </setting>
+            <setting name="ln_num_pad" serializeAs="String">
+                <value>4</value>
+            </setting>
+            <setting name="find_location" serializeAs="String">
+                <value>400, 300</value>
+            </setting>
+            <setting name="process_location" serializeAs="String">
+                <value>400, 300</value>
+            </setting>
+            <setting name="selected_font" serializeAs="String">
+                <value>Lucida Console, 9.75pt, style=Bold</value>
+            </setting>
+            <setting name="font_fore_color" serializeAs="String">
+                <value>White</value>
+            </setting>
+            <setting name="mc1" serializeAs="String">
+                <value>False</value>
+            </setting>
+            <setting name="mc2" serializeAs="String">
+                <value>False</value>
+            </setting>
+            <setting name="mc3" serializeAs="String">
+                <value>False</value>
+            </setting>
+            <setting name="mc4" serializeAs="String">
+                <value>False</value>
+            </setting>
+            <setting name="mc5" serializeAs="String">
+                <value>True</value>
+            </setting>
+            <setting name="mc6" serializeAs="String">
+                <value>False</value>
+            </setting>
+            <setting name="show_model" serializeAs="String">
+                <value>True</value>
+            </setting>
+            <setting name="color_scale" serializeAs="String">
+                <value>0.4</value>
+            </setting>
+            <setting name="z_retract" serializeAs="String">
+                <value>15</value>
+            </setting>
+            <setting name="clip_plane" serializeAs="String">
+                <value>.05</value>
+            </setting>
+            <setting name="step_time" serializeAs="String">
+                <value>100</value>
+            </setting>
+            <setting name="abs_inc_mode" serializeAs="String">
+                <value>True</value>
+            </setting>
+        </CodeChop.My.MySettings>
+    </userSettings>
+</configuration>

@@ -1,0 +1,150 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="My" GeneratedClassName="MySettings" UseMySettingsClassName="true">
+  <Profiles />
+  <Settings>
+    <Setting Name="port" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="baud" Type="System.String" Scope="User">
+      <Value Profile="(Default)">9600</Value>
+    </Setting>
+    <Setting Name="bits" Type="System.String" Scope="User">
+      <Value Profile="(Default)">8</Value>
+    </Setting>
+    <Setting Name="parity" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Mark</Value>
+    </Setting>
+    <Setting Name="stop_bits" Type="System.String" Scope="User">
+      <Value Profile="(Default)">2</Value>
+    </Setting>
+    <Setting Name="xfer_mode" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Xon/Xoff</Value>
+    </Setting>
+    <Setting Name="file_name" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="main_location" Type="System.Drawing.Point" Scope="User">
+      <Value Profile="(Default)">300, 300</Value>
+    </Setting>
+    <Setting Name="main_client_size" Type="System.Drawing.Size" Scope="User">
+      <Value Profile="(Default)">800, 566</Value>
+    </Setting>
+    <Setting Name="textbox_size" Type="System.Drawing.Size" Scope="User">
+      <Value Profile="(Default)">531, 408</Value>
+    </Setting>
+    <Setting Name="tb_text_size" Type="System.String" Scope="User">
+      <Value Profile="(Default)">12</Value>
+    </Setting>
+    <Setting Name="Where_Main_Is" Type="System.Windows.Forms.FormStartPosition" Scope="User">
+      <Value Profile="(Default)">CenterScreen</Value>
+    </Setting>
+    <Setting Name="hide_z" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="hide_rapid" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="show_grid" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
+    <Setting Name="render_3d" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="gl_lighting" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
+    <Setting Name="screen_prompts" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="f_open_directory" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="p2_collapsed" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="main_splitter_p2_collapsed" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="grid_level" Type="System.String" Scope="User">
+      <Value Profile="(Default)">.5</Value>
+    </Setting>
+    <Setting Name="ambient" Type="System.Single" Scope="User">
+      <Value Profile="(Default)">0.8</Value>
+    </Setting>
+    <Setting Name="main_split_distance" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">318</Value>
+    </Setting>
+    <Setting Name="open1_fliter_index" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">1</Value>
+    </Setting>
+    <Setting Name="open2_filter_index" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">1</Value>
+    </Setting>
+    <Setting Name="open2_init_directory" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="file_name_2" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="ln_num_pad" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">4</Value>
+    </Setting>
+    <Setting Name="find_location" Type="System.Drawing.Point" Scope="User">
+      <Value Profile="(Default)">400, 300</Value>
+    </Setting>
+    <Setting Name="process_location" Type="System.Drawing.Point" Scope="User">
+      <Value Profile="(Default)">400, 300</Value>
+    </Setting>
+    <Setting Name="selected_font" Type="System.Drawing.Font" Scope="User">
+      <Value Profile="(Default)">Lucida Console, 9.75pt, style=Bold</Value>
+    </Setting>
+    <Setting Name="font_fore_color" Type="System.Drawing.Color" Scope="User">
+      <Value Profile="(Default)">White</Value>
+    </Setting>
+    <Setting Name="mc1" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="mc2" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="mc3" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="mc4" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="mc5" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
+    <Setting Name="mc6" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="show_model" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
+    <Setting Name="color_scale" Type="System.Decimal" Scope="User">
+      <Value Profile="(Default)">0.4</Value>
+    </Setting>
+    <Setting Name="z_retract" Type="System.String" Scope="User">
+      <Value Profile="(Default)">15</Value>
+    </Setting>
+    <Setting Name="clip_plane" Type="System.String" Scope="User">
+      <Value Profile="(Default)">.05</Value>
+    </Setting>
+    <Setting Name="step_time" Type="System.String" Scope="User">
+      <Value Profile="(Default)">30</Value>
+    </Setting>
+    <Setting Name="abs_inc_mode" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
+    <Setting Name="sub_call" Type="System.String" Scope="User">
+      <Value Profile="(Default)">M98</Value>
+    </Setting>
+    <Setting Name="sub_return" Type="System.String" Scope="User">
+      <Value Profile="(Default)">M99</Value>
+    </Setting>
+    <Setting Name="fanuc" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

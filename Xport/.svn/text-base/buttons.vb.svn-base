@@ -1,0 +1,456 @@
+﻿Imports System
+Imports System.Drawing
+Imports System.Windows.Forms
+'Imports System.Windows.Forms.VisualStyles
+
+
+
+Public Class my_Btn
+
+    Inherits Windows.Forms.Button
+    Public state As Boolean = False
+    Protected Overrides Sub OnMouseEnter(ByVal e As System.EventArgs)
+        Me.BackgroundImage = My.Resources.BTN_M_OVER
+        MyBase.OnMouseEnter(e)
+    End Sub
+    Protected Overrides Sub OnMouseDown(ByVal mevent As System.Windows.Forms.MouseEventArgs)
+        Application.DoEvents()
+        Me.BackgroundImage = My.Resources.BTN_M_DOWN
+        Me.state = True
+        MyBase.OnMouseDown(mevent)
+    End Sub
+    Protected Overrides Sub OnMouseLeave(ByVal e As System.EventArgs)
+        Me.state = False
+        Me.BackgroundImage = My.Resources.BTN_M_UP
+        MyBase.OnMouseLeave(e)
+    End Sub
+    Protected Overrides Sub OnMouseUp(ByVal mevent As System.Windows.Forms.MouseEventArgs)
+        Me.state = False
+        Me.BackgroundImage = My.Resources.BTN_M_OVER
+        MyBase.OnMouseUp(mevent)
+    End Sub
+    Protected Overrides Sub OnParentChanged(ByVal e As System.EventArgs)
+        MyBase.OnParentChanged(e)
+        Me.FlatStyle = Windows.Forms.FlatStyle.Flat
+        Me.FlatAppearance.BorderSize = 0
+        Me.Text = ""
+        Me.AutoSize = False
+        Me.Width = 32
+        Me.Height = 32
+        Me.ImageAlign = ContentAlignment.MiddleCenter
+        Me.BackgroundImage = My.Resources.BTN_M_UP
+    End Sub
+    Protected Overrides Sub OnEnabledChanged(ByVal e As System.EventArgs)
+        Me.BackgroundImage = My.Resources.BTN_M_UP
+        MyBase.OnEnabledChanged(e)
+    End Sub
+
+End Class
+
+Public Class my_repeat_btn_forward
+    Inherits Windows.Forms.Button
+    Public flip As Boolean = False
+    Public locked As Boolean
+    Public Sub New()
+        AddHandler Timer_.Tick, AddressOf OnTimer
+        Timer_.Enabled = False
+    End Sub
+
+    Public Timer_ As New System.Windows.Forms.Timer
+    Public Property Interval() As Integer
+        Get
+            Return Timer_.Interval
+        End Get
+
+        Set(ByVal Value As Integer)
+            Timer_.Interval = Value
+        End Set
+    End Property
+
+    Private Sub OnTimer(ByVal sender As Object, ByVal e As EventArgs)
+        Timer_.Interval = step_time
+        Application.DoEvents()
+        If Me.locked Then
+            If flip Then
+                Me.BackgroundImage = My.Resources.BTN_M_DOWN
+                flip = False
+            Else
+                Me.BackgroundImage = My.Resources.BTN_M_OVER
+                flip = True
+            End If
+        End If
+        'fire off a click on each timer tick 
+        _btn_step_forward()
+        Application.DoEvents()
+
+    End Sub
+
+
+    Protected Overrides Sub OnMouseEnter(ByVal e As System.EventArgs)
+        If Me.locked Then
+        Else
+            Timer_.Enabled = False
+            Timer_.Interval = 1000
+            Me.BackgroundImage = My.Resources.BTN_M_OVER
+        End If
+        MyBase.OnMouseEnter(e)
+    End Sub
+    Protected Overrides Sub OnMouseDown(ByVal mevent As System.Windows.Forms.MouseEventArgs)
+        If mevent.Button = Windows.Forms.MouseButtons.Right Then
+            If Me.locked Then
+                Me.locked = False
+                Timer_.Interval = 1000
+            Else
+                Timer_.Interval = 10
+                Me.locked = True
+            End If
+        Else
+            Me.locked = False
+            Timer_.Interval = 1000
+        End If
+        If frmMain.btn_step_back.locked Then
+            frmMain.btn_step_back.reset()
+        End If
+        Timer_.Enabled = True
+        Me.BackgroundImage = My.Resources.BTN_M_DOWN
+        MyBase.OnMouseDown(mevent)
+    End Sub
+    Protected Overrides Sub OnMouseLeave(ByVal e As System.EventArgs)
+        If Me.locked Then
+        Else
+            Timer_.Enabled = False
+            Me.BackgroundImage = My.Resources.BTN_M_UP
+        End If
+        MyBase.OnMouseLeave(e)
+    End Sub
+    Protected Overrides Sub OnMouseUp(ByVal mevent As System.Windows.Forms.MouseEventArgs)
+        If mevent.Button = Windows.Forms.MouseButtons.Right Then
+        Else
+            Me.locked = False
+            Timer_.Enabled = False
+            Me.BackgroundImage = My.Resources.BTN_M_OVER
+
+        End If
+        MyBase.OnMouseUp(mevent)
+    End Sub
+    Protected Overrides Sub OnParentChanged(ByVal e As System.EventArgs)
+        MyBase.OnParentChanged(e)
+        Me.FlatStyle = Windows.Forms.FlatStyle.Flat
+        Me.FlatAppearance.BorderSize = 0
+        Me.Text = ""
+        Me.AutoSize = False
+        Me.Width = 32
+        Me.Height = 32
+        Me.ImageAlign = ContentAlignment.MiddleCenter
+        Me.BackgroundImage = My.Resources.BTN_M_UP
+        Me.TabStop = False
+    End Sub
+    Protected Overrides Sub OnEnabledChanged(ByVal e As System.EventArgs)
+        Me.BackgroundImage = My.Resources.BTN_M_UP
+        MyBase.OnEnabledChanged(e)
+    End Sub
+    Public Sub reset()
+        Me.locked = False
+        Timer_.Enabled = False
+        Me.BackgroundImage = My.Resources.BTN_M_UP
+    End Sub
+End Class
+
+Public Class my_repeat_btn_back
+    Inherits Windows.Forms.Button
+    Public flip As Boolean = False
+    Public locked As Boolean
+    Public Sub New()
+        AddHandler Timer_.Tick, AddressOf OnTimer
+        Timer_.Enabled = False
+    End Sub
+
+    Public Timer_ As New System.Windows.Forms.Timer
+    Public Property Interval() As Integer
+        Get
+            Return Timer_.Interval
+        End Get
+
+        Set(ByVal Value As Integer)
+            Timer_.Interval = Value
+        End Set
+    End Property
+
+    Private Sub OnTimer(ByVal sender As Object, ByVal e As EventArgs)
+        Timer_.Interval = step_time
+        Application.DoEvents()
+        If Me.locked Then
+            If flip Then
+                Me.BackgroundImage = My.Resources.BTN_M_DOWN
+                flip = False
+            Else
+                Me.BackgroundImage = My.Resources.BTN_M_OVER
+                flip = True
+            End If
+        End If
+        'fire off a click on each timer tick 
+        _btn_step_back()
+        Application.DoEvents()
+    End Sub
+
+
+    Protected Overrides Sub OnMouseEnter(ByVal e As System.EventArgs)
+        If Me.locked Then
+        Else
+            Timer_.Enabled = False
+            Timer_.Interval = 1000
+            Me.BackgroundImage = My.Resources.BTN_M_OVER
+        End If
+        MyBase.OnMouseEnter(e)
+    End Sub
+    Protected Overrides Sub OnMouseDown(ByVal mevent As System.Windows.Forms.MouseEventArgs)
+        If mevent.Button = Windows.Forms.MouseButtons.Right Then
+            If Me.locked Then
+                Me.locked = False
+                Timer_.Interval = 1000
+            Else
+                Timer_.Interval = 10
+                Me.locked = True
+            End If
+        Else
+            Me.locked = False
+            Timer_.Interval = 1000
+        End If
+        If frmMain.btn_step_forward.locked Then
+            frmMain.btn_step_forward.reset()
+        End If
+        Timer_.Enabled = True
+        Me.BackgroundImage = My.Resources.BTN_M_DOWN
+        MyBase.OnMouseDown(mevent)
+    End Sub
+    Protected Overrides Sub OnMouseLeave(ByVal e As System.EventArgs)
+        If Me.locked Then
+        Else
+            Timer_.Enabled = False
+            Me.BackgroundImage = My.Resources.BTN_M_UP
+        End If
+        MyBase.OnMouseLeave(e)
+    End Sub
+    Protected Overrides Sub OnMouseUp(ByVal mevent As System.Windows.Forms.MouseEventArgs)
+        If mevent.Button = Windows.Forms.MouseButtons.Right Then
+        Else
+            Me.locked = False
+            Timer_.Enabled = False
+            Me.BackgroundImage = My.Resources.BTN_M_OVER
+
+        End If
+        MyBase.OnMouseUp(mevent)
+    End Sub
+    Protected Overrides Sub OnParentChanged(ByVal e As System.EventArgs)
+        MyBase.OnParentChanged(e)
+        Me.FlatStyle = Windows.Forms.FlatStyle.Flat
+        Me.FlatAppearance.BorderSize = 0
+        Me.Text = ""
+        Me.AutoSize = False
+        Me.Width = 32
+        Me.Height = 32
+        Me.ImageAlign = ContentAlignment.MiddleCenter
+        Me.BackgroundImage = My.Resources.BTN_M_UP
+        Me.TabStop = False
+    End Sub
+    Protected Overrides Sub OnEnabledChanged(ByVal e As System.EventArgs)
+        Me.BackgroundImage = My.Resources.BTN_M_UP
+        MyBase.OnEnabledChanged(e)
+    End Sub
+    Public Sub reset()
+        Me.locked = False
+        Timer_.Enabled = False
+        Me.BackgroundImage = My.Resources.BTN_M_UP
+    End Sub
+End Class
+
+Public Class W_my_Btn
+
+    Inherits Windows.Forms.Button
+    Protected Overrides Sub OnMouseEnter(ByVal e As System.EventArgs)
+        Me.BackgroundImage = My.Resources.W_BTN_M_OVER
+        MyBase.OnMouseEnter(e)
+    End Sub
+    Protected Overrides Sub OnMouseDown(ByVal mevent As System.Windows.Forms.MouseEventArgs)
+        Me.BackgroundImage = My.Resources.W_BTN_M_DOWN
+        MyBase.OnMouseDown(mevent)
+    End Sub
+    Protected Overrides Sub OnMouseLeave(ByVal e As System.EventArgs)
+        Me.BackgroundImage = My.Resources.W_BTN_M_UP
+        MyBase.OnMouseLeave(e)
+    End Sub
+    Protected Overrides Sub OnMouseUp(ByVal mevent As System.Windows.Forms.MouseEventArgs)
+        Me.BackgroundImage = My.Resources.W_BTN_M_OVER
+        MyBase.OnMouseUp(mevent)
+    End Sub
+    Protected Overrides Sub OnParentChanged(ByVal e As System.EventArgs)
+        MyBase.OnParentChanged(e)
+        Me.FlatStyle = Windows.Forms.FlatStyle.Flat
+        Me.FlatAppearance.BorderSize = 0
+        Me.Text = ""
+        Me.AutoSize = False
+        Me.Width = 96
+        Me.Height = 32
+        Me.ImageAlign = ContentAlignment.MiddleCenter
+        Me.BackgroundImage = My.Resources.W_BTN_M_UP
+        Me.TabStop = False
+    End Sub
+    Protected Overrides Sub OnEnabledChanged(ByVal e As System.EventArgs)
+        Me.BackgroundImage = My.Resources.W_BTN_M_UP
+        MyBase.OnEnabledChanged(e)
+    End Sub
+
+End Class
+
+
+Public Class my_Frm_Btn
+
+    Inherits Windows.Forms.Button
+    Public state As Boolean = False
+    Protected Overrides Sub OnMouseEnter(ByVal e As System.EventArgs)
+        Me.BackgroundImage = My.Resources.Frm_Btn_OVER
+        MyBase.OnMouseEnter(e)
+    End Sub
+    Protected Overrides Sub OnMouseDown(ByVal mevent As System.Windows.Forms.MouseEventArgs)
+        Me.BackgroundImage = My.Resources.Frm_Btn_DOWN
+        MyBase.OnMouseDown(mevent)
+    End Sub
+    Protected Overrides Sub OnMouseLeave(ByVal e As System.EventArgs)
+        Me.BackgroundImage = My.Resources.Frm_Btn_UP
+        MyBase.OnMouseLeave(e)
+    End Sub
+    Protected Overrides Sub OnMouseUp(ByVal mevent As System.Windows.Forms.MouseEventArgs)
+        MyBase.OnMouseUp(mevent)
+        Me.BackgroundImage = My.Resources.Frm_Btn_OVER
+    End Sub
+    Protected Overrides Sub OnParentChanged(ByVal e As System.EventArgs)
+        MyBase.OnParentChanged(e)
+        Me.FlatStyle = Windows.Forms.FlatStyle.Flat
+        Me.FlatAppearance.BorderSize = 0
+        Me.Text = ""
+        Me.AutoSize = False
+        Me.Width = 24
+        Me.Height = 24
+        Me.ImageAlign = ContentAlignment.MiddleCenter
+        Me.BackgroundImage = My.Resources.Frm_Btn_UP
+        Me.TabStop = False
+    End Sub
+
+End Class
+
+
+Public Class my_Sqr_Btn
+
+    Inherits Windows.Forms.CheckBox
+
+    Public state As Boolean = False
+    Public mouse_in As Boolean = False
+    Protected Overrides Sub OnMouseEnter(ByVal e As System.EventArgs)
+        Me.mouse_in = True
+        If Me.Checked Then
+            Me.BackgroundImage = My.Resources.D_RND_BTN_M_DOWN
+        Else
+            Me.BackgroundImage = My.Resources.D_RND_BTN_M_OVER
+        End If
+        MyBase.OnMouseEnter(e)
+    End Sub
+    Protected Overrides Sub OnMouseDown(ByVal mevent As System.Windows.Forms.MouseEventArgs)
+        If Me.Checked Then
+            Me.BackgroundImage = My.Resources.D_RND_BTN_M_OVER
+        Else
+            Me.BackgroundImage = My.Resources.D_RND_BTN_M_DOWN
+        End If
+        MyBase.OnMouseDown(mevent)
+    End Sub
+    Protected Overrides Sub OnMouseLeave(ByVal e As System.EventArgs)
+        If Me.Checked Then
+            Me.BackgroundImage = My.Resources.D_RND_BTN_M_LOCKED
+        Else
+            Me.BackgroundImage = My.Resources.D_RND_BTN_M_UP
+        End If
+        MyBase.OnMouseLeave(e)
+    End Sub
+    Protected Overrides Sub OnMouseUp(ByVal mevent As System.Windows.Forms.MouseEventArgs)
+        'If Me.Checked Then
+        '    Me.BackgroundImage = My.Resources.D_RND_BTN_M_DOWN
+        'Else
+        '    Me.BackgroundImage = My.Resources.D_RND_BTN_M_OVER
+        'End If
+
+        MyBase.OnMouseUp(mevent)
+    End Sub
+
+    Protected Overrides Sub OnParentChanged(ByVal e As System.EventArgs)
+        MyBase.OnParentChanged(e)
+        Me.Appearance = Windows.Forms.Appearance.Button
+        Me.FlatStyle = Windows.Forms.FlatStyle.Flat
+        Me.FlatAppearance.BorderSize = 0
+        Me.Text = ""
+        Me.AutoSize = False
+        Me.Width = 32
+        Me.Height = 32
+        Me.ImageAlign = ContentAlignment.MiddleCenter
+        Me.TabStop = False
+        'Me.BackgroundImage = My.Resources.D_RND_BTN_M_UP
+    End Sub
+End Class
+
+
+Public Class my_spacer
+    Inherits PictureBox
+
+    Protected Overrides Sub OnParentChanged(ByVal e As System.EventArgs)
+        MyBase.OnParentChanged(e)
+    End Sub
+    Protected Overrides Sub OnPaint(ByVal pe As System.Windows.Forms.PaintEventArgs)
+        Me.Height = 38
+        Me.Width = 15
+        MyBase.OnPaint(pe)
+    End Sub
+End Class
+
+Public Class my_trackbar
+    Inherits TrackBar
+
+    Public Sub New()
+        'Me.SetStyle(ControlStyles.SupportsTransparentBackColor, True)
+        'Me.SetStyle(ControlStyles.OptimizedDoubleBuffer, True)
+
+        'Me.BackColor = Color.Black
+    End Sub
+    Protected Overrides Sub OnPaint(ByVal e As System.Windows.Forms.PaintEventArgs)
+        MyBase.OnPaint(e)
+    End Sub
+    Protected Overrides Sub OnPaintBackground(ByVal pevent As System.Windows.Forms.PaintEventArgs)
+        'MyBase.OnPaintBackground(pevent)
+    End Sub
+End Class
+Public Class my_x_tb
+    Inherits TextBox
+    Public id As Integer
+    Protected Overrides Sub OnTextChanged(ByVal e As System.EventArgs)
+        frmMain.offset_x_text_changed(id, Me)
+        MyBase.OnTextChanged(e)
+    End Sub
+    Public Sub set_Color()
+        Me.BackColor = Color.FromArgb(-12566464)
+        Me.ForeColor = Color.White
+        Me.TextAlign = HorizontalAlignment.Right
+        Me.Width = 40
+    End Sub
+End Class
+Public Class my_y_tb
+    Inherits TextBox
+    Public id As Integer
+    Protected Overrides Sub OnTextChanged(ByVal e As System.EventArgs)
+        frmMain.offset_y_text_changed(id, Me)
+        MyBase.OnTextChanged(e)
+    End Sub
+    Public Sub set_Color()
+        Me.BackColor = Color.FromArgb(-12566464)
+        Me.ForeColor = Color.White
+        Me.TextAlign = HorizontalAlignment.Right
+        Me.Width = 40
+    End Sub
+ 
+End Class

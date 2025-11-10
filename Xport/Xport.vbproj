@@ -1,0 +1,558 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.21022</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{ACEC39D5-7B68-4D2A-8389-D022A99A694E}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <StartupObject>CodeChop.My.MyApplication</StartupObject>
+    <RootNamespace>CodeChop</RootNamespace>
+    <AssemblyName>CodeChop</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>WindowsForms</MyType>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <OptionExplicit>On</OptionExplicit>
+    <OptionCompare>Binary</OptionCompare>
+    <OptionStrict>Off</OptionStrict>
+    <OptionInfer>On</OptionInfer>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <ManifestCertificateThumbprint>2F17B35E4325E42909C746CA58643E14F4F22CDD</ManifestCertificateThumbprint>
+    <ManifestKeyFile>
+    </ManifestKeyFile>
+    <GenerateManifests>false</GenerateManifests>
+    <SignManifests>true</SignManifests>
+    <ApplicationManifest>My Project\app.manifest</ApplicationManifest>
+    <ApplicationIcon>CodeChop.ico</ApplicationIcon>
+    <TargetZone>LocalIntranet</TargetZone>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <PublishUrl>C:\xport_publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>37</ApplicationRevision>
+    <ApplicationVersion>1.0.3.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>false</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>CodeChop.xml</DocumentationFile>
+    <NoWarn>41999,42016,42017,42018,42019,42020,42021,42022,42032,42036,42353,42354,42355</NoWarn>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>false</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>CodeChop.xml</DocumentationFile>
+    <NoWarn>41999,42016,42017,42018,42019,42020,42021,42022,42032,42036,42353,42354,42355</NoWarn>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <DocumentationFile>CodeChop.xml</DocumentationFile>
+    <NoWarn>41999,42016,42017,42018,42019,42020,42021,42022,42032,42036,42353,42354,42355</NoWarn>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <OutputPath>bin\x64\Release\</OutputPath>
+    <DocumentationFile>CodeChop.xml</DocumentationFile>
+    <Optimize>true</Optimize>
+    <NoWarn>41999,42016,42017,42018,42019,42020,42021,42022,42032,42036,42353,42354,42355</NoWarn>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="OpenTK, Version=3.1.0.0, Culture=neutral, PublicKeyToken=bad199fe84eb3df4, processorArchitecture=MSIL">
+      <HintPath>..\packages\OpenTK.3.1.0\lib\net20\OpenTK.dll</HintPath>
+    </Reference>
+    <Reference Include="OpenTK.GLControl, Version=3.1.0.0, Culture=neutral, PublicKeyToken=bad199fe84eb3df4, processorArchitecture=MSIL">
+      <HintPath>..\packages\OpenTK.GLControl.3.1.0\lib\net20\OpenTK.GLControl.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.Services.Design">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="Tao.FreeGlut, Version=2.4.0.2, Culture=neutral, PublicKeyToken=6e602a6ad6c0d06d, processorArchitecture=MSIL" />
+    <Reference Include="Tao.OpenGl, Version=2.1.0.12, Culture=neutral, PublicKeyToken=1ca010269a4501ef, processorArchitecture=MSIL" />
+    <Reference Include="Tao.Platform.Windows, Version=1.0.0.5, Culture=neutral, PublicKeyToken=701104b2da67a104, processorArchitecture=MSIL" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="Microsoft.VisualBasic.Devices" />
+    <Import Include="Microsoft.VisualBasic.FileIO" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.IO" />
+    <Import Include="System.IO.Ports" />
+    <Import Include="System.Management" />
+    <Import Include="System.Text" />
+    <Import Include="System.Threading" />
+    <Import Include="System.Windows.Forms" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+    <Import Include="Tao" />
+    <Import Include="Tao.FreeGlut" />
+    <Import Include="Tao.OpenGl" />
+    <Import Include="Tao.Platform.Windows" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="APIs.vb" />
+    <Compile Include="ApplicationEvents.vb" />
+    <Compile Include="class.vb">
+    </Compile>
+    <Compile Include="Class1.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="buttons.Designer.vb">
+      <DependentUpon>buttons.vb</DependentUpon>
+    </Compile>
+    <Compile Include="buttons.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Forms\Find.Designer.vb">
+      <DependentUpon>Find.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Find.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\fixture_offsets.Designer.vb">
+      <DependentUpon>fixture_offsets.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\fixture_offsets.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmControl.Designer.vb">
+      <DependentUpon>frmControl.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmControl.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmMain.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmMain.Designer.vb">
+      <DependentUpon>frmMain.vb</DependentUpon>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\set_coord_tb.Designer.vb">
+      <DependentUpon>set_coord_tb.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\set_coord_tb.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmfilter.Designer.vb">
+      <DependentUpon>frmfilter.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmfilter.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Global_vars.vb" />
+    <Compile Include="Forms\Lighting.Designer.vb">
+      <DependentUpon>Lighting.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Lighting.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Menu_Events.vb">
+    </Compile>
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="pick_blocks.vb" />
+    <Compile Include="Re_number.Designer.vb">
+      <DependentUpon>Re_number.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Re_number.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="solids.vb" />
+    <Compile Include="un_docked_edit.Designer.vb">
+      <DependentUpon>un_docked_edit.vb</DependentUpon>
+    </Compile>
+    <Compile Include="un_docked_edit.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="zoom_window.Designer.vb">
+      <DependentUpon>zoom_window.vb</DependentUpon>
+    </Compile>
+    <Compile Include="zoom_window.vb">
+      <SubType>Form</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Forms\fixture_offsets.resx">
+      <DependentUpon>fixture_offsets.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmControl.resx">
+      <DependentUpon>frmControl.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\set_coord_tb.resx">
+      <DependentUpon>set_coord_tb.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmfilter.resx">
+      <DependentUpon>frmfilter.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Find.resx">
+      <DependentUpon>Find.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmMain.resx">
+      <DependentUpon>frmMain.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Lighting.resx">
+      <DependentUpon>Lighting.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Re_number.resx">
+      <DependentUpon>Re_number.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="un_docked_edit.resx">
+      <DependentUpon>un_docked_edit.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="zoom_window.resx">
+      <DependentUpon>zoom_window.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="OpenTK.dll.config" />
+    <None Include="packages.config" />
+    <None Include="Resources\generic.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\folder.open.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\disk.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\disk_black.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\folder_open.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\folder_open_document_text.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="Resources\cross.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.2.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 2.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\WirelessConnection.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\arrow_skip_180.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\arrow_skip.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\documents.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\clipboard.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cross1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\clipboard__arrow.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\document_text.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\plot.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\control.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\control_double.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\control_double_180.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\control_pause.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\control_power.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\control_stop.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\control_stop_180.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\grid.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\StopHS.png" />
+    <None Include="Resources\button_spacer.png" />
+    <None Include="Resources\button_skin.png" />
+    <None Include="agreement.rtf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ClassDiagram1.cd" />
+    <None Include="codechop.stl">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="com_console.exe.config">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="My Project\app.manifest" />
+    <None Include="Resources\3D.png" />
+    <None Include="Resources\light_bulb_off.png" />
+    <None Include="Resources\question.png" />
+    <None Include="Xport_TemporaryKey.pfx" />
+    <None Include="Tao.FreeGlut.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Tao.OpenGl.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Tao.Platform.Windows.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Resources\ball.png" />
+    <None Include="Resources\target.png" />
+    <None Include="Resources\blank_sort.png" />
+    <None Include="Resources\!_layout_v1.png" />
+    <None Include="Resources\!_layout_h1.png" />
+    <None Include="Resources\arrow_circle.png" />
+    <None Include="Resources\image_resize_actual.png" />
+    <None Include="Resources\!_center.png" />
+    <None Include="Resources\row_header_back_1.png" />
+    <None Include="Resources\mm_mid_over.png" />
+    <None Include="Resources\column_back_1.png" />
+    <None Include="Resources\!_layout_v.png" />
+    <None Include="Resources\!_layout_h.png" />
+    <None Include="Resources\arc.png" />
+    <None Include="Resources\bar_background.png" />
+    <None Include="Resources\BTN_M_DOWN.png" />
+    <None Include="Resources\BTN_M_OVER.png" />
+    <None Include="Resources\BTN_M_UP.png" />
+    <None Include="Resources\D_RND_BTN_M_DOWN.png" />
+    <None Include="Resources\D_RND_BTN_M_LOCKED.png" />
+    <None Include="Resources\D_RND_BTN_M_OVER.png" />
+    <None Include="Resources\D_RND_BTN_M_UP.png" />
+    <None Include="Resources\Frm_Btn_UP.png" />
+    <None Include="Resources\Frm_Btn_DOWN.png" />
+    <None Include="Resources\Frm_Btn_OVER.png" />
+    <Content Include="comsettings.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="com_console.exe">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="com_console.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <None Include="File_Filter.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <Content Include="freeglut.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CodeChop.ico" />
+    <None Include="Resources\offset_background.png" />
+    <None Include="Resources\NCP.ICO" />
+    <None Include="Resources\solids.png" />
+    <None Include="Resources\zoom_window.png" />
+    <None Include="Resources\move.png" />
+    <None Include="Resources\Color_fontHS.png" />
+    <None Include="Resources\FontDialogHS.png" />
+    <None Include="Resources\FullScreenHS1.png" />
+    <None Include="Resources\CompressSpaceHS.png" />
+    <None Include="Resources\ExpandSpaceHS.png" />
+    <None Include="Resources\z_only.png" />
+    <None Include="Resources\points.png" />
+    <None Include="Resources\head_left.png" />
+    <None Include="Resources\head_right.png" />
+    <None Include="Resources\head_mid.png" />
+    <None Include="Resources\head_left.gif" />
+    <None Include="Resources\head_right.gif" />
+    <None Include="Resources\FullScreenHS.png" />
+    <None Include="Resources\minus.png" />
+    <None Include="Resources\applications-blue.png" />
+    <None Include="Resources\application-blue.png" />
+    <None Include="Resources\spacer_2.png" />
+    <None Include="Resources\DeleteHS.png" />
+    <None Include="Resources\Edit_UndoHS.png" />
+    <None Include="Resources\Edit_RedoHS.png" />
+    <None Include="Resources\FindNextHS.png" />
+    <None Include="Resources\CutHS.png" />
+    <None Include="Resources\FindHS.png" />
+    <None Include="Resources\ReplaceHS.png" />
+    <None Include="Resources\del_num.png" />
+    <None Include="Resources\re_num.png" />
+    <None Include="Resources\rapid.png" />
+    <None Include="Resources\draw_highlighted.png" />
+    <None Include="Resources\bar_background.gif" />
+    <None Include="Resources\light_background.png" />
+    <None Include="Resources\com-con.png" />
+    <None Include="Resources\W_BTN_M_UP.png" />
+    <None Include="Resources\W_BTN_M_DOWN.png" />
+    <None Include="Resources\W_BTN_M_OVER.png" />
+    <None Include="Resources\process_bg.png" />
+    <None Include="Tao.FreeGlut.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Tao.OpenGl.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Tao.Platform.Windows.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <PublishFile Include="Tao.FreeGlut">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="Tao.OpenGl">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="Tao.Platform.Windows">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="backup work\" />
+    <Folder Include="My Project\DataSources\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

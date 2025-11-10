@@ -1,0 +1,9 @@
+// This is a comment Line
+// blank lines are ignored
+// the structure is as follows
+// File type :*.fileExtinsion
+//Example CNC:*.NC
+Okuma :*.min
+CNC :*.NCF
+TEXT :*.TXT
+All Files :*.*

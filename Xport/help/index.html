@@ -1,0 +1,314 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<link rel="shortcut icon" href="http://tnmshouse.com/icon.gif" type="image/gif" />
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="CNC,Backplotting,back plotting,backplot,back plot,varify, tool path,toolpath " />
+<title>CodeChop Help</title>
+<style type="text/css">
+<!--
+body {
+	background-color: #dddddd;
+	background-image: url();
+}
+.style1 {
+	font-size: 36px;
+	font-weight: bold;
+	color: #0;
+}
+.style2 {
+	font-size: 18px;
+	font-weight: bold;
+	color: #000000;
+}
+.style3 {
+	font-size: 24px;
+	font-weight: bold;
+	color: #0;
+}
+.style4 {font-size: 18px; font-weight: normal; color: #0; }
+.style5 {color: #0; font-size: 18px;}
+.style6 {font-size: 72px}
+.style7 {color: #0; font-size: 24px;}
+.style10 {color: #000000; font-size: 18px;}
+.style12 {font-size: 14px}
+-->
+</style>
+</head>
+
+<body>
+<table width="80%" border="0" align="center" cellpadding="5">
+  <tr>
+    <td width="80%"><div align="center">
+      <table width="80%" border="0" align="center" cellpadding="5">
+        <tr bgcolor="#CCCCCC">
+          <td width="102" nowrap="nowrap"><img src="nav_ball.gif" width="85" height="87" /></td>
+          <td width="375"><div align="left"><span class="style1"><span class="style6">CodeChop:</span><br />
+          </span><span class="style3">The CNC Programmers Helper!</span></div></td>
+          <td width="448"><div align="left"><span class="style3">Make CNC programming Fun!<br />
+            </span><span class="style5">Fast.. Simple.. Easy..<br />
+              Rocket Fast Path Selection.<br />
+              STL Solid Import.<br />
+            Full Un-Dockable Text Editor and MUCH MORE!</span></div></td>
+        </tr>
+      </table>
+      <br />
+        <form action="https://www.paypal.com/cgi-bin/webscr" method="post">
+          <div valign="bottom">
+            <span class="style5">
+  <input type="hidden" name="cmd" value="_donations">
+  <input type="hidden" name="business" value="meow19672000@yahoo.com">
+  <input type="hidden" name="lc" value="US">
+  <input type="hidden" name="item_name" value="CodeChop">
+  <input type="hidden" name="currency_code" value="USD">
+  <input type="hidden" name="bn" value="PP-DonationsBF:btn_donate_LG.gif:NonHostedGuest">
+  <span class="style12">Help Keep This Project Alive!</span>  
+  <input name="submit" type="image" src="https://www.paypal.com/en_US/i/btn/btn_donate_LG.gif" alt="PayPal - The safer, easier way to pay online!" align="bottom" border="0">
+  <img alt="" border="0" src="https://www.paypal.com/en_US/i/scr/pixel.gif" width="1" height="1"><br />
+          </span></div>
+        </form>
+        <span class="style5"><br />
+       Install on ALL your machines for Free!<br />
+      To download,  go <a href="http://tnmshouse.com/release/">HERE!</a> </span><br />
+      Please visit the <a href="http://tnmshouse.com/codechop/phpBB2/index.php">Support Forums</a> if you have questions.<br />
+      <br />
+      <table width="80%" border="0">
+        <tr>
+          <td class="style3"><a href="http://tnmshouse.com/codechop/highrez1.jpg" target="_blank"><img src="THhighrez1.jpg" width="289" height="181" border="0" /></a></td>
+          <td class="style3"><a href="http://tnmshouse.com/codechop/highrez3.jpg" target="_blank"><img src="THhighrez3.jpg" width="288" height="181" border="0" /></a></td>
+          <td><a href="http://tnmshouse.com/codechop/highrez4.jpg" target="_blank"><img src="THhighrez4.jpg" width="288" height="181" border="0" /></a></td>
+        </tr>
+      </table>
+      <p align="center" class="style3"><span class="style5">Click to enlarge an Image. </span><br />
+        </p>
+      <table width="100%" border="0">
+        <tr>
+          <td><p><span class="style3"><span class="style5">System Requirements:<br />
+            </span></span><span class="style7"><span class="style5">Pentium 4</span></span><span class="style3"><span class="style5"> <br />
+              </span></span><span class="style7"><span class="style5">Windows XP, Vista Or Seven<br />
+                OpenGL 1.5 or above Video Card<br />
+                1024x768 Minimum resolution <br />
+            1Gig Sys Ram.</span></span></p>
+            <p><span class="style3">Ideal system:</span><span class="style4"><br />
+  Quad Core w/ 4gig Ram <br />
+  Pci-E Video Card with 512M ram. Such as NVidia's 8800GT or 8800GTS cards </span><br />
+</p></td>
+        </tr>
+      </table>
+      <br />
+      <p align="center" class="style3"><img src="v_spacer.gif" width="1200" height="10" /><br />
+        Getting around in the Plot Window:</p>
+      <p align="left" class="style4">To change your view.. there are a few options.<br />
+      You can press the 'left mouse button' and spin the view about the Z axis and<br />
+      tilt the rotation.<br />
+      To Zoom, use the right mouse button.<br />
+      To move the look at center on XY, press the shift key and left mouse button.<br />
+      To move the look at center in the Z plane, Use Ctrl key and left mouse button.<br />
+      Notice that a 'Cross hair' will show where you are looking.<br />
+      There is a button on the toolbar to lock this on.<br />
+      If you have the 'Auto Center on Selection' button locked, your look at center will be snapped to the END point of a line or arc move.<br />
+      You can also use the Nav Ball and center click on one of the letters to force the view from that direction.</p>
+      <p align="center" class="style3"><img src="v_spacer.gif" width="1200" height="10" /><br />
+        Some Basic Information on 
+        the Buttons:</p>
+      <p align="left" class="style3">File/Editor Related:<br />
+          <img src="file_icons.jpg" width="571" height="33" /></p>
+      <p align="left"><span class="style5">From the Left End</span><span class="style4">:</span></p>
+      <p align="left"><span class="style5">Point Filter - This opens the opens the Filtering Panel. <br />
+        New File - Clears the Editor and removes the STL from memory (If one is loaded) <br />
+        Open File - Better save first if you need to. CodeChop wont Ask you! <br />
+        Save - Use to save current changes. If you have filtered CNC code. It will save the new file with CVRT_ added to the start. <br />
+        Save As - In case you want to save the current file as a different name. <br />
+        Copy - This and the other edit buttons do just what the say. <br />
+        Paste - Pastes ANY text that's in the clipboard. <br />
+        Delete - Deletes selected text. <br />
+        Cut - Deletes and moves selected text to the Clipboard. <br />
+        Undo - Undo changes in text. <br />
+        Redo - Redo changes in test. <br />
+        Find - Find Text. (F3) <br />
+        Find Next (F3) <br />
+        Find and Replace (F4)<br />
+        Remove Line Numbers - Strips all line numbers off all blocks of CNC code. <br />
+      Re-Number/Insert Line Numbers - Does NOT renumber Comment Blocks or Blocks that start with the letter 'O' <br />
+      </span><span class="style4"><br />
+        </span></p>
+    </div>
+      <p class="style3">Plot Related:<br />
+          <img src="display.jpg" width="435" height="33" /></p>
+      <p class="style4"><br />
+        These are Lockable Buttons and turn On/Off the following.</p>
+      <p><span class="style5">From the Left</span><span class="style4">:<br />
+            <br />
+        </span><span class="style5">Plot Window<br />
+          Vertical/Horizontal Window Layout<br />
+          Grid<br />
+          Rapid Moves<br />
+          Z Only Moves<br />
+          Z-Buffer<br />
+          Snap to Selection<br />
+          Eye Look At Center<br />
+          Selected Path<br />
+          Zoom Window<br />
+          Free Spin<br />
+    Com Console</span></p>
+    <p><span class="style3">Tool Path and Model Related:<br />
+        <img src="display_controls.jpg" width="224" height="37" /></span></p>
+    <p><span class="style5">From the Left:</span></p>
+    <p class="style5">Rewind<br />
+    Step Backwards. - Hold down to auto repeat. Right click to 'Lock' auto repeat on. <br />
+    ReDraw/Update Plot Window<br />
+    Step Forward. - Hold down to auto repeat. Right click to 'Lock' auto repeat on. <br />
+    Lighting, STL Settings and other display/tool path related settings.<br />
+    Load STL Model</p>
+    <p align="center" class="style5"><img src="v_spacer.gif" width="1200" height="10" /><br />  
+      </p>
+    <table width="800" border="0" align="center" cellpadding="5">
+      <tr>
+        <td><div align="center"><span class="style5"><span class="style3">Point to Arc Filtering.</span></span></div></td>
+      </tr>
+    </table>
+    <p align="left" class="style5">      This could also be called &quot;Line to Arc Filtering&quot;. What this tries to do is convert single points/lines that approximate an Arc and turn it in to an Arc Move.<br />
+      This is a working converter but has limitations. The Results are very dependent on the resolution that the original CNC code was produced at. Very small arcs in your CNC code will require extreme tolerances.<br />
+      I recommend a very tight setting of .0002 when you generate your tool path on small arcs (Under .125). You may even have to go tighter than this. The down side is, it will take longer for your CAM package to generate the tool path but you will get much better results when you arc filter the path.<br />
+      <br />
+      <br />
+    </p>
+    <table width="800" border="0" cellpadding="5">
+      <tr>
+        <td width="252"><div align="left"><span class="style5">The Filter Tool:<br />
+          <img src="filter.jpg" width="251" height="300" /></span></div></td>
+        <td width="522" valign="top" class="style5"><br />
+          This is what the tool looks like.<br />
+          The MAX Angle error is shown between P1-P2 and P2-P3<br />
+          <br />
+          <img src="arc_errors.gif" width="256" height="200" /><br />
+          The Max Radius Variation is the fit of the Arc.<br />
+          On LARGE ARCS, you may need to be generous with this value.</td>
+      </tr>
+    </table>
+    <p class="style5">Once you set these values and press Process File, A window will open so you can select the CNC file to process.<br />
+      Once the processing is complete, this same tool will show the total lines at the start, the total lines removed, the new line count and the percent of file reduction.<br />
+      Also, CVRT_ will be attached to the front of the file name. Your original file is unchanged.<br />
+      Reduction is good but bad code is just BAD.<br />
+      You will need to 'Play' with these values and carefully inspect the results of the process.<br /> 
+      Some types of tool path does not always produce good results. Intersections between TWO ARCS is something you will need to be<br />
+      VERY AWARE  OF AND CAREFUL WITH! Close angles between two arcs can fool my algorithm and cause over/under shooting.<br />
+      Once the file has been converted, the editor will load the new CNC code and the plot window will update to the newly generated path.</p>
+    <p align="center" class="style5"><img src="v_spacer.gif" width="1200" height="10" /><br />
+    </p>
+    <table width="800" border="0" align="center" cellpadding="5">
+      <tr>
+        <td class="style3"><div align="center"><span class="style3">The Nav Ball:</span></div></td>
+      </tr>
+    </table>
+    <table width="800" border="0" cellpadding="5">
+      <tr>
+        <td width="102"><span class="style5"><img src="nav_ball.gif" width="85" height="87" /><br />
+          <img src="nav_m_over.gif" width="89" height="87" /></span></td>
+        <td width="672" valign="top" class="style5"><p><br />
+          This will show you the direction you are looking at.</p>
+          <p>Top, Bot, Left, Right, Front, Back.<br />
+            <br />
+          </p>
+          <p>If you 'mouse over' the Nav Ball, the ball will disappear. if you mouse over one of the letters and press the center mouse button, your view in the plot window will change to that view angle.</p></td>
+      </tr>
+    </table>
+    <p align="center" class="style5"><img src="v_spacer.gif" width="1200" height="10" /></p>
+    <table width="800" border="0" align="center" cellpadding="5">
+      <tr>
+        <td><div align="center"><span class="style3">Light/Model Settings
+          :</span></div></td>
+      </tr>
+    </table>
+    <table width="975" border="0" cellpadding="5">
+      <tr>
+        <td width="304"><span class="style5"><img src="light.jpg" width="300" height="361" align="top" /><br />
+        </span></td>
+        <td width="645" valign="top" class="style5"><p>          This controls the light level in the plot window, the brightness of the grid and lets you select from 6 different base colors for the STL Solid Model.<br />
+          <br />
+          The Color Scale will change the overall brightness of the model. Using the 6 colors and the color scale, you can produce most metal and plastic looking colors.<br />
+          <br />
+          The 'Show Model' Check box' does just that. Its default is checked. <br />
+          <br />
+          Near Clip  controls the clip plane from the camera position. A small value is useful for viewing very small details. <br />
+          Step Time is the delay in milliseconds before the auto repeat path
+          draw function fires again.<br />
+          Z Retract is the level at which all paths retract for tool change. If your machine is 20&quot; from the table.. this is a good value but.. on small parts, it looks odd so 5&quot; may be a better choice. </p>
+          <p>The File Types button will open the 'File_Filter.txt' file so you can change what files<br />
+          are filtered in the Open, Save, Save As... and in the Com Panel, Save and Send Dialog<br />
+          Boxes.</p>          </td>
+      </tr>
+    </table>
+    <div align="center"><br />
+        <img src="v_spacer.gif" width="1200" height="10" /><br />
+      <br />
+    </div>
+    <table width="800" border="0" align="center" cellpadding="5">
+      <tr>
+        <td><div align="center"><span class="style3">The Editor Context Menu:</span></div></td>
+      </tr>
+    </table>
+    <table width="800" border="0" cellpadding="5">
+      <tr>
+        <td width="210" class="style5"><br />
+          <img src="context_menu.jpg" width="180" height="408" /></td>
+        <td width="564" valign="top"><p>&nbsp;</p>
+          <p class="style5">To get to this menu, Right Click anywhere in the text editor window.<br />
+          It contains some of the same functions as the tool bar Icons along with some special functions.</p>
+          <p class="style5">There is the Expand and Compress text. Basically it inserts or removes spaces between the G code so that..</p>
+          <p class="style5">X1.0Y2.0Z3.0 Becomes X1.0 Y2.0 Z3.0<br />
+            This makes things easier on the eyes.<br />
+          </p>
+          <p class="style5">The Edit Window function:<br /> 
+            This will UnDock the edit window so you can place it where ever you want. Even make it full screen on a 2nd Monitor! You can use F5 to dock and undock the window.<br />
+            <br />
+          Font changes the font and size and Font Color changes the Font's fore color.<br />
+          </p></td>
+      </tr>
+    </table>    <p align="left" class="style5"><img src="v_spacer.gif" width="1200" height="10" /><br />
+      </p>
+    <table width="800" border="0" cellpadding="5">
+      <tr>
+        <td><div align="center"><span class="style5"><span class="style2"><span class="style3">How this all works:</span></span></span></div></td>
+      </tr>
+      <tr>
+        <td valign="top" class="style5"><p><span class="style10">The reason a video card with lots of memory is important is, the CNC tool path is converted<br />
+          from text G-Code data in to something that the Video Card can display. Once this is done,<br />
+          the OpenGL code is loaded in to the video card. Because the data is loaded in to the video<br />
+          card, the more memory, the bigger the CNC program can be with out slowing the display. If<br />
+          the video card runs out of memory, then part of the OpenGL data will be stored in system ram.<br />
+        This can really slow things down. I use this at work daily with an old nVidia 440MX with only<br />
+        64M of memory. It runs flawless until I open other apps that also use video ram such as my<br />
+        CAM package. </span><span class="style10">See the problem now? The two applications are fighting over Video Ram!<br />
+        <br />
+            The conversion from CNC to OpenGL is as fast as I can make it  and still keep info embedded<br />
+            that you will need. When you select tool path in the plot window, the type of move will be<br />
+            displayed on the bottom of the screen. Linear, Canned, Length Offset and so on.<br />
+            <br />
+        When you open a file, it is converted to OpenGL for displaying.<br />
+        If you edit the file, you will need to UPDATE the display by clicking the Update button at the<br />
+        bottom of the plot window. It looks like the standard 'Play' button on Audio Systems.<br />
+        <br />
+        The selection is done using a method called 'Color Selection'.. Its easy to understand and.. IS<br />
+        the fastest method there is to select from tens of thousands of items. Basically, I draw the<br />
+        screen in the back buffer. Each item is only one color value higher then the next. None of this<br />
+        you see because the back buffer during selection is never push to the front buffer(the screen).</span><br />
+        What ever color I get back is a direct pointer to that position in the item list. From that list,<br />
+        I get the line that generated that bit of tool path. From there its just a matter of highlighting<br />
+        the text in the editor. Simple huh? Well.. Coding it wasn't all that and a bag of chips. On<br />
+        my P4 at work with a 5meg CNC program loaded, It will select the path I'm after as soon as<br />
+        I lift my finger off the middle mouse button. It is 'Rock Fast Selection!'</p>
+          <p><span class="style2"><br />
+          </span></p></td>
+      </tr>
+    </table>
+    <p align="left" class="style5"><br />
+    </p></td>
+  </tr>
+</table>
+<p class="style2"><span class="style5"><br />
+</span><br />
+</p>
+</body>
+</html>
