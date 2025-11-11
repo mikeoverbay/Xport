@@ -1,6 +1,6 @@
-#- CodeChop -
+# - CodeChop -
 
-##NC Toolpath Visualization
+## NC Toolpath Visualization
 
 Written in VB.NET.
 ___
