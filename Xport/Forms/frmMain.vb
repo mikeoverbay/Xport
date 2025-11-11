@@ -199,7 +199,7 @@ Public Class frmMain
 
         End While
         Try
-            Dim pt = Application.StartupPath
+            Dim pt As String = System.IO.Path.GetTempPath()
             Dim offs As String = File.ReadAllText(pt + "\offsets.text")
             Dim _data = offs.Split(",")
             Dim pos As Integer = 0
@@ -761,8 +761,13 @@ Public Class frmMain
             oss.Append(offset_x(i).ToString + "," + offset_y(i).ToString + ",")
 
         Next
-        Dim pt = Application.StartupPath
-        File.WriteAllText(pt + "\offsets.text", oss.ToString)
+        Dim pt As String = System.IO.Path.GetTempPath()
+        Try
+            File.WriteAllText(pt + "\offsets.text", oss.ToString)
+
+        Catch ex As Exception
+
+        End Try
         GL.DeleteLists(gl_list_base, 5)
         DisableOpenGL()
         My.Settings.Save()

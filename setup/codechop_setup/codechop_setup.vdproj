@@ -15,31 +15,19 @@
     {
         "Entry"
         {
-        "MsmKey" = "8:_1E5BB2D000C94072B11F7337A65936DF"
-        "OwnerKey" = "8:_UNDEFINED"
+        "MsmKey" = "8:_3EC176FD3BAA580CA3061C5A732EBDD5"
+        "OwnerKey" = "8:_9A36B593A673442EB738B206E3E0A30F"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_3EC176FD3BAA580CA3061C5A732EBDD5"
+        "OwnerKey" = "8:_6297B62D961551BED7FDCEF469666B8F"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
         "MsmKey" = "8:_412289693D784648A0AAEE9ACC65D1CE"
-        "OwnerKey" = "8:_UNDEFINED"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_4411B4CA750D6A35A883B5E6574B7CCE"
-        "OwnerKey" = "8:_1E5BB2D000C94072B11F7337A65936DF"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_4411B4CA750D6A35A883B5E6574B7CCE"
-        "OwnerKey" = "8:_87AF638B542C34FE469FC19CEF2406D3"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_4C42867F04D84CBBAC3E0B086D62551F"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -51,19 +39,31 @@
         }
         "Entry"
         {
-        "MsmKey" = "8:_79E0860907BD3FA72E60880F3A886B43"
-        "OwnerKey" = "8:_1E5BB2D000C94072B11F7337A65936DF"
+        "MsmKey" = "8:_571EC6BDE93842A7B0A5E6156781A88F"
+        "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
-        "MsmKey" = "8:_87AF638B542C34FE469FC19CEF2406D3"
-        "OwnerKey" = "8:_1E5BB2D000C94072B11F7337A65936DF"
+        "MsmKey" = "8:_6297B62D961551BED7FDCEF469666B8F"
+        "OwnerKey" = "8:_9A36B593A673442EB738B206E3E0A30F"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
-        "MsmKey" = "8:_A67E936AE0CE474582DD683D48330AAB"
+        "MsmKey" = "8:_943EE4A4B96F40B484D46521305BE7A2"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_95EAB3A5FBEF518426B82F9DCFC7411C"
+        "OwnerKey" = "8:_9A36B593A673442EB738B206E3E0A30F"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_9A36B593A673442EB738B206E3E0A30F"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -75,8 +75,8 @@
         }
         "Entry"
         {
-        "MsmKey" = "8:_C63141486125478484868EC177A3387F"
-        "OwnerKey" = "8:_UNDEFINED"
+        "MsmKey" = "8:_DA5F5EB0D204EA2590545840134DD857"
+        "OwnerKey" = "8:_9A36B593A673442EB738B206E3E0A30F"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -99,32 +99,50 @@
         }
         "Entry"
         {
-        "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_1E5BB2D000C94072B11F7337A65936DF"
+        "MsmKey" = "8:_FFD51DA80A41D6D2261050727F6651D1"
+        "OwnerKey" = "8:_9A36B593A673442EB738B206E3E0A30F"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_FFD51DA80A41D6D2261050727F6651D1"
+        "OwnerKey" = "8:_95EAB3A5FBEF518426B82F9DCFC7411C"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_4C42867F04D84CBBAC3E0B086D62551F"
+        "OwnerKey" = "8:_3EC176FD3BAA580CA3061C5A732EBDD5"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_87AF638B542C34FE469FC19CEF2406D3"
+        "OwnerKey" = "8:_9A36B593A673442EB738B206E3E0A30F"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_4411B4CA750D6A35A883B5E6574B7CCE"
+        "OwnerKey" = "8:_95EAB3A5FBEF518426B82F9DCFC7411C"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_79E0860907BD3FA72E60880F3A886B43"
+        "OwnerKey" = "8:_FFD51DA80A41D6D2261050727F6651D1"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_UNDEFINED"
+        "OwnerKey" = "8:_DA5F5EB0D204EA2590545840134DD857"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_UNDEFINED"
+        "OwnerKey" = "8:_6297B62D961551BED7FDCEF469666B8F"
         "MsmSig" = "8:_UNDEFINED"
         }
     }
@@ -224,7 +242,7 @@
                 {
                 "Name" = "8:.NET Framework"
                 "Message" = "8:[VSDNETMSG]"
-                "Version" = "8:3.5.21022"
+                "FrameworkVersion" = "8:.NETFramework,Version=v4.6"
                 "AllowLaterVersions" = "11:FALSE"
                 "InstallUrl" = "8:http://go.microsoft.com/fwlink/?LinkId=76617"
                 }
@@ -232,43 +250,23 @@
         }
         "File"
         {
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_412289693D784648A0AAEE9ACC65D1CE"
-            {
-            "SourcePath" = "8:..\\..\\Xport\\agreement.rtf"
-            "TargetName" = "8:agreement.rtf"
-            "Tag" = "8:"
-            "Folder" = "8:_89841258C9D945F086D333E41B804E64"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:FALSE"
-            "IsolateTo" = "8:"
-            }
-            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_4411B4CA750D6A35A883B5E6574B7CCE"
+            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_3EC176FD3BAA580CA3061C5A732EBDD5"
             {
             "AssemblyRegister" = "3:1"
             "AssemblyIsInGAC" = "11:FALSE"
-            "AssemblyAsmDisplayName" = "8:Tao.OpenGl, Version=2.1.0.12, Culture=neutral, PublicKeyToken=1ca010269a4501ef, processorArchitecture=MSIL"
+            "AssemblyAsmDisplayName" = "8:OpenTK, Version=3.1.0.0, Culture=neutral, PublicKeyToken=bad199fe84eb3df4, processorArchitecture=MSIL"
                 "ScatterAssemblies"
                 {
-                    "_4411B4CA750D6A35A883B5E6574B7CCE"
+                    "_3EC176FD3BAA580CA3061C5A732EBDD5"
                     {
-                    "Name" = "8:Tao.OpenGl.dll"
+                    "Name" = "8:OpenTK.dll"
                     "Attributes" = "3:512"
                     }
                 }
-            "SourcePath" = "8:Tao.OpenGl.dll"
+            "SourcePath" = "8:OpenTK.dll"
             "TargetName" = "8:"
             "Tag" = "8:"
-            "Folder" = "8:_89841258C9D945F086D333E41B804E64"
+            "Folder" = "8:_11769EA4BADA42769284FC681F59A418"
             "Condition" = "8:"
             "Transitive" = "11:FALSE"
             "Vital" = "11:TRUE"
@@ -281,6 +279,26 @@
             "Register" = "3:1"
             "Exclude" = "11:FALSE"
             "IsDependency" = "11:TRUE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_412289693D784648A0AAEE9ACC65D1CE"
+            {
+            "SourcePath" = "8:..\\..\\Xport\\agreement.rtf"
+            "TargetName" = "8:agreement.rtf"
+            "Tag" = "8:"
+            "Folder" = "8:_11769EA4BADA42769284FC681F59A418"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_53DE33C17D55412B9423D2E8BEB9C8DA"
@@ -288,7 +306,7 @@
             "SourcePath" = "8:..\\..\\Xport\\TAO.txt"
             "TargetName" = "8:TAO.txt"
             "Tag" = "8:"
-            "Folder" = "8:_89841258C9D945F086D333E41B804E64"
+            "Folder" = "8:_11769EA4BADA42769284FC681F59A418"
             "Condition" = "8:"
             "Transitive" = "11:FALSE"
             "Vital" = "11:TRUE"
@@ -303,23 +321,43 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
-            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_79E0860907BD3FA72E60880F3A886B43"
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_571EC6BDE93842A7B0A5E6156781A88F"
+            {
+            "SourcePath" = "8:..\\..\\Xport\\File_Filter.txt"
+            "TargetName" = "8:File_Filter.txt"
+            "Tag" = "8:"
+            "Folder" = "8:_11769EA4BADA42769284FC681F59A418"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_6297B62D961551BED7FDCEF469666B8F"
             {
             "AssemblyRegister" = "3:1"
             "AssemblyIsInGAC" = "11:FALSE"
-            "AssemblyAsmDisplayName" = "8:Tao.FreeGlut, Version=2.4.0.2, Culture=neutral, PublicKeyToken=6e602a6ad6c0d06d, processorArchitecture=MSIL"
+            "AssemblyAsmDisplayName" = "8:OpenTK.GLControl, Version=3.1.0.0, Culture=neutral, PublicKeyToken=bad199fe84eb3df4, processorArchitecture=MSIL"
                 "ScatterAssemblies"
                 {
-                    "_79E0860907BD3FA72E60880F3A886B43"
+                    "_6297B62D961551BED7FDCEF469666B8F"
                     {
-                    "Name" = "8:Tao.FreeGlut.dll"
+                    "Name" = "8:OpenTK.GLControl.dll"
                     "Attributes" = "3:512"
                     }
                 }
-            "SourcePath" = "8:Tao.FreeGlut.dll"
+            "SourcePath" = "8:OpenTK.GLControl.dll"
             "TargetName" = "8:"
             "Tag" = "8:"
-            "Folder" = "8:_89841258C9D945F086D333E41B804E64"
+            "Folder" = "8:_11769EA4BADA42769284FC681F59A418"
             "Condition" = "8:"
             "Transitive" = "11:FALSE"
             "Vital" = "11:TRUE"
@@ -334,14 +372,34 @@
             "IsDependency" = "11:TRUE"
             "IsolateTo" = "8:"
             }
-            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_87AF638B542C34FE469FC19CEF2406D3"
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_943EE4A4B96F40B484D46521305BE7A2"
+            {
+            "SourcePath" = "8:..\\..\\Xport\\freeglut.dll"
+            "TargetName" = "8:freeglut.dll"
+            "Tag" = "8:"
+            "Folder" = "8:_11769EA4BADA42769284FC681F59A418"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_95EAB3A5FBEF518426B82F9DCFC7411C"
             {
             "AssemblyRegister" = "3:1"
             "AssemblyIsInGAC" = "11:FALSE"
             "AssemblyAsmDisplayName" = "8:Tao.Platform.Windows, Version=1.0.0.5, Culture=neutral, PublicKeyToken=701104b2da67a104, processorArchitecture=MSIL"
                 "ScatterAssemblies"
                 {
-                    "_87AF638B542C34FE469FC19CEF2406D3"
+                    "_95EAB3A5FBEF518426B82F9DCFC7411C"
                     {
                     "Name" = "8:Tao.Platform.Windows.dll"
                     "Attributes" = "3:512"
@@ -350,7 +408,7 @@
             "SourcePath" = "8:Tao.Platform.Windows.dll"
             "TargetName" = "8:"
             "Tag" = "8:"
-            "Folder" = "8:_89841258C9D945F086D333E41B804E64"
+            "Folder" = "8:_11769EA4BADA42769284FC681F59A418"
             "Condition" = "8:"
             "Transitive" = "11:FALSE"
             "Vital" = "11:TRUE"
@@ -365,32 +423,12 @@
             "IsDependency" = "11:TRUE"
             "IsolateTo" = "8:"
             }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_A67E936AE0CE474582DD683D48330AAB"
-            {
-            "SourcePath" = "8:C:\\WINDOWS\\system32\\msiexec.exe"
-            "TargetName" = "8:msiexec.exe"
-            "Tag" = "8:"
-            "Folder" = "8:_5D5FA3550F424F4F9124C97C0445E19E"
-            "Condition" = "8:NOT Installed"
-            "Transitive" = "11:TRUE"
-            "Vital" = "11:FALSE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:TRUE"
-            "Permanent" = "11:TRUE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:FALSE"
-            "IsolateTo" = "8:"
-            }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_B6AEB661A882435386E6BC19FE9D7E42"
             {
             "SourcePath" = "8:..\\..\\Xport\\CodeChop.ico"
             "TargetName" = "8:CodeChop.ico"
             "Tag" = "8:"
-            "Folder" = "8:_89841258C9D945F086D333E41B804E64"
+            "Folder" = "8:_11769EA4BADA42769284FC681F59A418"
             "Condition" = "8:"
             "Transitive" = "11:FALSE"
             "Vital" = "11:TRUE"
@@ -405,12 +443,23 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_C63141486125478484868EC177A3387F"
+            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_DA5F5EB0D204EA2590545840134DD857"
             {
-            "SourcePath" = "8:..\\..\\Xport\\freeglut.dll"
-            "TargetName" = "8:freeglut.dll"
+            "AssemblyRegister" = "3:1"
+            "AssemblyIsInGAC" = "11:FALSE"
+            "AssemblyAsmDisplayName" = "8:Tao.FreeGlut, Version=2.4.0.2, Culture=neutral, PublicKeyToken=6e602a6ad6c0d06d, processorArchitecture=MSIL"
+                "ScatterAssemblies"
+                {
+                    "_DA5F5EB0D204EA2590545840134DD857"
+                    {
+                    "Name" = "8:Tao.FreeGlut.dll"
+                    "Attributes" = "3:512"
+                    }
+                }
+            "SourcePath" = "8:Tao.FreeGlut.dll"
+            "TargetName" = "8:"
             "Tag" = "8:"
-            "Folder" = "8:_89841258C9D945F086D333E41B804E64"
+            "Folder" = "8:_11769EA4BADA42769284FC681F59A418"
             "Condition" = "8:"
             "Transitive" = "11:FALSE"
             "Vital" = "11:TRUE"
@@ -422,7 +471,7 @@
             "PackageAs" = "3:1"
             "Register" = "3:1"
             "Exclude" = "11:FALSE"
-            "IsDependency" = "11:FALSE"
+            "IsDependency" = "11:TRUE"
             "IsolateTo" = "8:"
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_E49FEC85F0764FB9A0D4B5AA9087A61D"
@@ -430,7 +479,7 @@
             "SourcePath" = "8:..\\..\\Xport\\codechop.stl"
             "TargetName" = "8:codechop.stl"
             "Tag" = "8:"
-            "Folder" = "8:_89841258C9D945F086D333E41B804E64"
+            "Folder" = "8:_11769EA4BADA42769284FC681F59A418"
             "Condition" = "8:"
             "Transitive" = "11:FALSE"
             "Vital" = "11:TRUE"
@@ -450,7 +499,7 @@
             "SourcePath" = "8:..\\..\\Xport\\install_banner.bmp"
             "TargetName" = "8:install_banner.bmp"
             "Tag" = "8:"
-            "Folder" = "8:_89841258C9D945F086D333E41B804E64"
+            "Folder" = "8:_11769EA4BADA42769284FC681F59A418"
             "Condition" = "8:"
             "Transitive" = "11:FALSE"
             "Vital" = "11:TRUE"
@@ -470,7 +519,7 @@
             "SourcePath" = "8:..\\..\\com_settings\\com_settings\\NCP.ICO"
             "TargetName" = "8:CC.ICO"
             "Tag" = "8:"
-            "Folder" = "8:_89841258C9D945F086D333E41B804E64"
+            "Folder" = "8:_11769EA4BADA42769284FC681F59A418"
             "Condition" = "8:"
             "Transitive" = "11:FALSE"
             "Vital" = "11:TRUE"
@@ -483,6 +532,37 @@
             "Register" = "3:1"
             "Exclude" = "11:FALSE"
             "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_FFD51DA80A41D6D2261050727F6651D1"
+            {
+            "AssemblyRegister" = "3:1"
+            "AssemblyIsInGAC" = "11:FALSE"
+            "AssemblyAsmDisplayName" = "8:Tao.OpenGl, Version=2.1.0.12, Culture=neutral, PublicKeyToken=1ca010269a4501ef, processorArchitecture=MSIL"
+                "ScatterAssemblies"
+                {
+                    "_FFD51DA80A41D6D2261050727F6651D1"
+                    {
+                    "Name" = "8:Tao.OpenGl.dll"
+                    "Attributes" = "3:512"
+                    }
+                }
+            "SourcePath" = "8:Tao.OpenGl.dll"
+            "TargetName" = "8:"
+            "Tag" = "8:"
+            "Folder" = "8:_11769EA4BADA42769284FC681F59A418"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:TRUE"
             "IsolateTo" = "8:"
             }
         }
@@ -514,13 +594,24 @@
                 {
                     "{9EF0B969-E518-4E46-987F-47570745A589}:_89841258C9D945F086D333E41B804E64"
                     {
-                    "Name" = "8:CodeChop"
+                    "Name" = "8:Coffee_"
                     "AlwaysCreate" = "11:FALSE"
                     "Condition" = "8:"
                     "Transitive" = "11:FALSE"
                     "Property" = "8:_3362FB7446F64134AD99E0CD1E11C87A"
                         "Folders"
                         {
+                            "{9EF0B969-E518-4E46-987F-47570745A589}:_11769EA4BADA42769284FC681F59A418"
+                            {
+                            "Name" = "8:CodeChop"
+                            "AlwaysCreate" = "11:FALSE"
+                            "Condition" = "8:"
+                            "Transitive" = "11:FALSE"
+                            "Property" = "8:_55C6971EF0C24C98B8397CC0946D125C"
+                                "Folders"
+                                {
+                                }
+                            }
                         }
                     }
                 }
@@ -575,8 +666,9 @@
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:CodeChop"
         "ProductCode" = "8:{38FF6A4A-38CC-4530-BB5E-C122AEB46B9F}"
-        "PackageCode" = "8:{DB33FD5F-8055-45B4-8EE5-710C9935BD54}"
+        "PackageCode" = "8:{1560D2F0-629F-4A03-9073-810B11938B6C}"
         "UpgradeCode" = "8:{C9154284-D2FD-4417-AD65-263C02A91F4D}"
+        "AspNetVersion" = "8:4.0.30319.0"
         "RestartWWWService" = "11:FALSE"
         "RemovePreviousVersions" = "11:FALSE"
         "DetectNewerInstalledVersion" = "11:TRUE"
@@ -694,21 +786,7 @@
         }
         "Shortcut"
         {
-            "{970C0BB2-C7D0-45D7-ABFA-7EC378858BC0}:_4B6DD666376D444DAAE5D885D3B5812B"
-            {
-            "Name" = "8:Uninstall CodeChop"
-            "Arguments" = "8:/x {38FF6A4A-38CC-4530-BB5E-C122AEB46B9F}"
-            "Description" = "8:"
-            "ShowCmd" = "3:1"
-            "IconIndex" = "3:0"
-            "Transitive" = "11:FALSE"
-            "Target" = "8:_A67E936AE0CE474582DD683D48330AAB"
-            "Folder" = "8:_B27016AF621A45AAAC524F3B3F6A5A3E"
-            "WorkingFolder" = "8:_5D5FA3550F424F4F9124C97C0445E19E"
-            "Icon" = "8:"
-            "Feature" = "8:"
-            }
-            "{970C0BB2-C7D0-45D7-ABFA-7EC378858BC0}:_4EF31B6A1C6340F787C3F2D85F383E89"
+            "{970C0BB2-C7D0-45D7-ABFA-7EC378858BC0}:_2D888229C2EB424B86763660884B073B"
             {
             "Name" = "8:CodeChop"
             "Arguments" = "8:"
@@ -716,13 +794,13 @@
             "ShowCmd" = "3:1"
             "IconIndex" = "3:0"
             "Transitive" = "11:FALSE"
-            "Target" = "8:_1E5BB2D000C94072B11F7337A65936DF"
+            "Target" = "8:_9A36B593A673442EB738B206E3E0A30F"
             "Folder" = "8:_E9A8883F20D34F44B9BBA02F7A889907"
             "WorkingFolder" = "8:_89841258C9D945F086D333E41B804E64"
             "Icon" = "8:_B6AEB661A882435386E6BC19FE9D7E42"
             "Feature" = "8:"
             }
-            "{970C0BB2-C7D0-45D7-ABFA-7EC378858BC0}:_70406093C79240ED9D8C174AAA2017B8"
+            "{970C0BB2-C7D0-45D7-ABFA-7EC378858BC0}:_B4BCB9DF435341698CFD375D6C28DCA9"
             {
             "Name" = "8:CodeChop"
             "Arguments" = "8:"
@@ -730,38 +808,10 @@
             "ShowCmd" = "3:1"
             "IconIndex" = "3:0"
             "Transitive" = "11:FALSE"
-            "Target" = "8:_1E5BB2D000C94072B11F7337A65936DF"
+            "Target" = "8:_9A36B593A673442EB738B206E3E0A30F"
             "Folder" = "8:_B27016AF621A45AAAC524F3B3F6A5A3E"
-            "WorkingFolder" = "8:_89841258C9D945F086D333E41B804E64"
+            "WorkingFolder" = "8:_11769EA4BADA42769284FC681F59A418"
             "Icon" = "8:_B6AEB661A882435386E6BC19FE9D7E42"
-            "Feature" = "8:"
-            }
-            "{970C0BB2-C7D0-45D7-ABFA-7EC378858BC0}:_81084A7FFBF94518A2143777829C5463"
-            {
-            "Name" = "8:Com Console"
-            "Arguments" = "8:"
-            "Description" = "8:"
-            "ShowCmd" = "3:1"
-            "IconIndex" = "3:0"
-            "Transitive" = "11:FALSE"
-            "Target" = "8:_4C42867F04D84CBBAC3E0B086D62551F"
-            "Folder" = "8:_E9A8883F20D34F44B9BBA02F7A889907"
-            "WorkingFolder" = "8:_89841258C9D945F086D333E41B804E64"
-            "Icon" = "8:_FBFF97C7018B447F9DEC36019068F8B5"
-            "Feature" = "8:"
-            }
-            "{970C0BB2-C7D0-45D7-ABFA-7EC378858BC0}:_CDD851E7EC124BFA98E0D24184D320C1"
-            {
-            "Name" = "8:Com Console"
-            "Arguments" = "8:"
-            "Description" = "8:"
-            "ShowCmd" = "3:1"
-            "IconIndex" = "3:0"
-            "Transitive" = "11:FALSE"
-            "Target" = "8:_4C42867F04D84CBBAC3E0B086D62551F"
-            "Folder" = "8:_B27016AF621A45AAAC524F3B3F6A5A3E"
-            "WorkingFolder" = "8:_89841258C9D945F086D333E41B804E64"
-            "Icon" = "8:_FBFF97C7018B447F9DEC36019068F8B5"
             "Feature" = "8:"
             }
         }
@@ -1164,12 +1214,12 @@
         }
         "ProjectOutput"
         {
-            "{5259A561-127C-4D43-A0A1-72F10C7B3BF8}:_1E5BB2D000C94072B11F7337A65936DF"
+            "{5259A561-127C-4D43-A0A1-72F10C7B3BF8}:_9A36B593A673442EB738B206E3E0A30F"
             {
-            "SourcePath" = "8:..\\..\\Xport\\obj\\x86\\Release\\CodeChop.exe"
+            "SourcePath" = "8:..\\..\\Xport\\obj\\Release\\CodeChop.exe"
             "TargetName" = "8:"
             "Tag" = "8:"
-            "Folder" = "8:_89841258C9D945F086D333E41B804E64"
+            "Folder" = "8:_11769EA4BADA42769284FC681F59A418"
             "Condition" = "8:"
             "Transitive" = "11:FALSE"
             "Vital" = "11:TRUE"
@@ -1184,65 +1234,9 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             "ProjectOutputGroupRegister" = "3:1"
-            "OutputConfiguration" = "8:Release|x86"
+            "OutputConfiguration" = "8:"
             "OutputGroupCanonicalName" = "8:Built"
             "OutputProjectGuid" = "8:{ACEC39D5-7B68-4D2A-8389-D022A99A694E}"
-            "ShowKeyOutput" = "11:TRUE"
-                "ExcludeFilters"
-                {
-                }
-            }
-            "{5259A561-127C-4D43-A0A1-72F10C7B3BF8}:_4C42867F04D84CBBAC3E0B086D62551F"
-            {
-            "SourcePath" = "8:..\\..\\com_settings\\com_settings\\obj\\x86\\Release\\com_console.exe"
-            "TargetName" = "8:"
-            "Tag" = "8:"
-            "Folder" = "8:_89841258C9D945F086D333E41B804E64"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:FALSE"
-            "IsolateTo" = "8:"
-            "ProjectOutputGroupRegister" = "3:1"
-            "OutputConfiguration" = "8:"
-            "OutputGroupCanonicalName" = "8:Built"
-            "OutputProjectGuid" = "8:{0F727FDE-4D1B-4167-99AF-EFA9267F34F2}"
-            "ShowKeyOutput" = "11:TRUE"
-                "ExcludeFilters"
-                {
-                }
-            }
-            "{5259A561-127C-4D43-A0A1-72F10C7B3BF8}:_5FE661153A5F4625BFCC761F861EE920"
-            {
-            "SourcePath" = "8:"
-            "TargetName" = "8:"
-            "Tag" = "8:"
-            "Folder" = "8:_89841258C9D945F086D333E41B804E64"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:FALSE"
-            "IsolateTo" = "8:"
-            "ProjectOutputGroupRegister" = "3:1"
-            "OutputConfiguration" = "8:"
-            "OutputGroupCanonicalName" = "8:ContentFiles"
-            "OutputProjectGuid" = "8:{0F727FDE-4D1B-4167-99AF-EFA9267F34F2}"
             "ShowKeyOutput" = "11:TRUE"
                 "ExcludeFilters"
                 {
