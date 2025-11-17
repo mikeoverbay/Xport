@@ -15,14 +15,26 @@
     {
         "Entry"
         {
-        "MsmKey" = "8:_3EC176FD3BAA580CA3061C5A732EBDD5"
+        "MsmKey" = "8:_0413C6C52483ABB953FC861E3D5F7EA6"
         "OwnerKey" = "8:_9A36B593A673442EB738B206E3E0A30F"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
-        "MsmKey" = "8:_3EC176FD3BAA580CA3061C5A732EBDD5"
-        "OwnerKey" = "8:_6297B62D961551BED7FDCEF469666B8F"
+        "MsmKey" = "8:_0413C6C52483ABB953FC861E3D5F7EA6"
+        "OwnerKey" = "8:_30CF6BA6725F32CBF6D22452BE197FB4"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_30CF6BA6725F32CBF6D22452BE197FB4"
+        "OwnerKey" = "8:_9A36B593A673442EB738B206E3E0A30F"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_3C8EABB18F3653D0604B4ECA07DC82DC"
+        "OwnerKey" = "8:_9A36B593A673442EB738B206E3E0A30F"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -45,20 +57,20 @@
         }
         "Entry"
         {
-        "MsmKey" = "8:_6297B62D961551BED7FDCEF469666B8F"
+        "MsmKey" = "8:_78C3BA29E54F0C273FAB386D66CDF989"
         "OwnerKey" = "8:_9A36B593A673442EB738B206E3E0A30F"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_78C3BA29E54F0C273FAB386D66CDF989"
+        "OwnerKey" = "8:_F2A657E0A5EDECE094AF3EE3315A5786"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
         "MsmKey" = "8:_943EE4A4B96F40B484D46521305BE7A2"
         "OwnerKey" = "8:_UNDEFINED"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_95EAB3A5FBEF518426B82F9DCFC7411C"
-        "OwnerKey" = "8:_9A36B593A673442EB738B206E3E0A30F"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -75,12 +87,6 @@
         }
         "Entry"
         {
-        "MsmKey" = "8:_DA5F5EB0D204EA2590545840134DD857"
-        "OwnerKey" = "8:_9A36B593A673442EB738B206E3E0A30F"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
         "MsmKey" = "8:_E49FEC85F0764FB9A0D4B5AA9087A61D"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
@@ -93,30 +99,18 @@
         }
         "Entry"
         {
+        "MsmKey" = "8:_F2A657E0A5EDECE094AF3EE3315A5786"
+        "OwnerKey" = "8:_9A36B593A673442EB738B206E3E0A30F"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
         "MsmKey" = "8:_FBFF97C7018B447F9DEC36019068F8B5"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
-        "MsmKey" = "8:_FFD51DA80A41D6D2261050727F6651D1"
-        "OwnerKey" = "8:_9A36B593A673442EB738B206E3E0A30F"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_FFD51DA80A41D6D2261050727F6651D1"
-        "OwnerKey" = "8:_95EAB3A5FBEF518426B82F9DCFC7411C"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_3EC176FD3BAA580CA3061C5A732EBDD5"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
         "MsmKey" = "8:_UNDEFINED"
         "OwnerKey" = "8:_9A36B593A673442EB738B206E3E0A30F"
         "MsmSig" = "8:_UNDEFINED"
@@ -124,25 +118,31 @@
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_95EAB3A5FBEF518426B82F9DCFC7411C"
+        "OwnerKey" = "8:_30CF6BA6725F32CBF6D22452BE197FB4"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_FFD51DA80A41D6D2261050727F6651D1"
+        "OwnerKey" = "8:_0413C6C52483ABB953FC861E3D5F7EA6"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_DA5F5EB0D204EA2590545840134DD857"
+        "OwnerKey" = "8:_3C8EABB18F3653D0604B4ECA07DC82DC"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_6297B62D961551BED7FDCEF469666B8F"
+        "OwnerKey" = "8:_F2A657E0A5EDECE094AF3EE3315A5786"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_UNDEFINED"
+        "OwnerKey" = "8:_78C3BA29E54F0C273FAB386D66CDF989"
         "MsmSig" = "8:_UNDEFINED"
         }
     }
@@ -250,20 +250,82 @@
         }
         "File"
         {
-            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_3EC176FD3BAA580CA3061C5A732EBDD5"
+            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_0413C6C52483ABB953FC861E3D5F7EA6"
             {
             "AssemblyRegister" = "3:1"
             "AssemblyIsInGAC" = "11:FALSE"
-            "AssemblyAsmDisplayName" = "8:OpenTK, Version=3.1.0.0, Culture=neutral, PublicKeyToken=bad199fe84eb3df4, processorArchitecture=MSIL"
+            "AssemblyAsmDisplayName" = "8:Tao.OpenGl, Version=2.1.0.12, Culture=neutral, PublicKeyToken=1ca010269a4501ef, processorArchitecture=MSIL"
                 "ScatterAssemblies"
                 {
-                    "_3EC176FD3BAA580CA3061C5A732EBDD5"
+                    "_0413C6C52483ABB953FC861E3D5F7EA6"
                     {
-                    "Name" = "8:OpenTK.dll"
+                    "Name" = "8:Tao.OpenGl.dll"
                     "Attributes" = "3:512"
                     }
                 }
-            "SourcePath" = "8:OpenTK.dll"
+            "SourcePath" = "8:Tao.OpenGl.dll"
+            "TargetName" = "8:"
+            "Tag" = "8:"
+            "Folder" = "8:_11769EA4BADA42769284FC681F59A418"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:TRUE"
+            "IsolateTo" = "8:"
+            }
+            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_30CF6BA6725F32CBF6D22452BE197FB4"
+            {
+            "AssemblyRegister" = "3:1"
+            "AssemblyIsInGAC" = "11:FALSE"
+            "AssemblyAsmDisplayName" = "8:Tao.Platform.Windows, Version=1.0.0.5, Culture=neutral, PublicKeyToken=701104b2da67a104, processorArchitecture=MSIL"
+                "ScatterAssemblies"
+                {
+                    "_30CF6BA6725F32CBF6D22452BE197FB4"
+                    {
+                    "Name" = "8:Tao.Platform.Windows.dll"
+                    "Attributes" = "3:512"
+                    }
+                }
+            "SourcePath" = "8:Tao.Platform.Windows.dll"
+            "TargetName" = "8:"
+            "Tag" = "8:"
+            "Folder" = "8:_11769EA4BADA42769284FC681F59A418"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:TRUE"
+            "IsolateTo" = "8:"
+            }
+            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_3C8EABB18F3653D0604B4ECA07DC82DC"
+            {
+            "AssemblyRegister" = "3:1"
+            "AssemblyIsInGAC" = "11:FALSE"
+            "AssemblyAsmDisplayName" = "8:Tao.FreeGlut, Version=2.4.0.2, Culture=neutral, PublicKeyToken=6e602a6ad6c0d06d, processorArchitecture=MSIL"
+                "ScatterAssemblies"
+                {
+                    "_3C8EABB18F3653D0604B4ECA07DC82DC"
+                    {
+                    "Name" = "8:Tao.FreeGlut.dll"
+                    "Attributes" = "3:512"
+                    }
+                }
+            "SourcePath" = "8:Tao.FreeGlut.dll"
             "TargetName" = "8:"
             "Tag" = "8:"
             "Folder" = "8:_11769EA4BADA42769284FC681F59A418"
@@ -341,20 +403,20 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
-            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_6297B62D961551BED7FDCEF469666B8F"
+            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_78C3BA29E54F0C273FAB386D66CDF989"
             {
             "AssemblyRegister" = "3:1"
             "AssemblyIsInGAC" = "11:FALSE"
-            "AssemblyAsmDisplayName" = "8:OpenTK.GLControl, Version=3.1.0.0, Culture=neutral, PublicKeyToken=bad199fe84eb3df4, processorArchitecture=MSIL"
+            "AssemblyAsmDisplayName" = "8:OpenTK, Version=3.1.0.0, Culture=neutral, PublicKeyToken=bad199fe84eb3df4, processorArchitecture=MSIL"
                 "ScatterAssemblies"
                 {
-                    "_6297B62D961551BED7FDCEF469666B8F"
+                    "_78C3BA29E54F0C273FAB386D66CDF989"
                     {
-                    "Name" = "8:OpenTK.GLControl.dll"
+                    "Name" = "8:OpenTK.dll"
                     "Attributes" = "3:512"
                     }
                 }
-            "SourcePath" = "8:OpenTK.GLControl.dll"
+            "SourcePath" = "8:OpenTK.dll"
             "TargetName" = "8:"
             "Tag" = "8:"
             "Folder" = "8:_11769EA4BADA42769284FC681F59A418"
@@ -392,37 +454,6 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
-            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_95EAB3A5FBEF518426B82F9DCFC7411C"
-            {
-            "AssemblyRegister" = "3:1"
-            "AssemblyIsInGAC" = "11:FALSE"
-            "AssemblyAsmDisplayName" = "8:Tao.Platform.Windows, Version=1.0.0.5, Culture=neutral, PublicKeyToken=701104b2da67a104, processorArchitecture=MSIL"
-                "ScatterAssemblies"
-                {
-                    "_95EAB3A5FBEF518426B82F9DCFC7411C"
-                    {
-                    "Name" = "8:Tao.Platform.Windows.dll"
-                    "Attributes" = "3:512"
-                    }
-                }
-            "SourcePath" = "8:Tao.Platform.Windows.dll"
-            "TargetName" = "8:"
-            "Tag" = "8:"
-            "Folder" = "8:_11769EA4BADA42769284FC681F59A418"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:TRUE"
-            "IsolateTo" = "8:"
-            }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_B6AEB661A882435386E6BC19FE9D7E42"
             {
             "SourcePath" = "8:..\\..\\Xport\\CodeChop.ico"
@@ -441,37 +472,6 @@
             "Register" = "3:1"
             "Exclude" = "11:FALSE"
             "IsDependency" = "11:FALSE"
-            "IsolateTo" = "8:"
-            }
-            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_DA5F5EB0D204EA2590545840134DD857"
-            {
-            "AssemblyRegister" = "3:1"
-            "AssemblyIsInGAC" = "11:FALSE"
-            "AssemblyAsmDisplayName" = "8:Tao.FreeGlut, Version=2.4.0.2, Culture=neutral, PublicKeyToken=6e602a6ad6c0d06d, processorArchitecture=MSIL"
-                "ScatterAssemblies"
-                {
-                    "_DA5F5EB0D204EA2590545840134DD857"
-                    {
-                    "Name" = "8:Tao.FreeGlut.dll"
-                    "Attributes" = "3:512"
-                    }
-                }
-            "SourcePath" = "8:Tao.FreeGlut.dll"
-            "TargetName" = "8:"
-            "Tag" = "8:"
-            "Folder" = "8:_11769EA4BADA42769284FC681F59A418"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:TRUE"
             "IsolateTo" = "8:"
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_E49FEC85F0764FB9A0D4B5AA9087A61D"
@@ -514,6 +514,37 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
+            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_F2A657E0A5EDECE094AF3EE3315A5786"
+            {
+            "AssemblyRegister" = "3:1"
+            "AssemblyIsInGAC" = "11:FALSE"
+            "AssemblyAsmDisplayName" = "8:OpenTK.GLControl, Version=3.1.0.0, Culture=neutral, PublicKeyToken=bad199fe84eb3df4, processorArchitecture=MSIL"
+                "ScatterAssemblies"
+                {
+                    "_F2A657E0A5EDECE094AF3EE3315A5786"
+                    {
+                    "Name" = "8:OpenTK.GLControl.dll"
+                    "Attributes" = "3:512"
+                    }
+                }
+            "SourcePath" = "8:OpenTK.GLControl.dll"
+            "TargetName" = "8:"
+            "Tag" = "8:"
+            "Folder" = "8:_11769EA4BADA42769284FC681F59A418"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:TRUE"
+            "IsolateTo" = "8:"
+            }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_FBFF97C7018B447F9DEC36019068F8B5"
             {
             "SourcePath" = "8:..\\..\\com_settings\\com_settings\\NCP.ICO"
@@ -532,37 +563,6 @@
             "Register" = "3:1"
             "Exclude" = "11:FALSE"
             "IsDependency" = "11:FALSE"
-            "IsolateTo" = "8:"
-            }
-            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_FFD51DA80A41D6D2261050727F6651D1"
-            {
-            "AssemblyRegister" = "3:1"
-            "AssemblyIsInGAC" = "11:FALSE"
-            "AssemblyAsmDisplayName" = "8:Tao.OpenGl, Version=2.1.0.12, Culture=neutral, PublicKeyToken=1ca010269a4501ef, processorArchitecture=MSIL"
-                "ScatterAssemblies"
-                {
-                    "_FFD51DA80A41D6D2261050727F6651D1"
-                    {
-                    "Name" = "8:Tao.OpenGl.dll"
-                    "Attributes" = "3:512"
-                    }
-                }
-            "SourcePath" = "8:Tao.OpenGl.dll"
-            "TargetName" = "8:"
-            "Tag" = "8:"
-            "Folder" = "8:_11769EA4BADA42769284FC681F59A418"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:TRUE"
             "IsolateTo" = "8:"
             }
         }
@@ -666,7 +666,7 @@
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:CodeChop"
         "ProductCode" = "8:{38FF6A4A-38CC-4530-BB5E-C122AEB46B9F}"
-        "PackageCode" = "8:{1560D2F0-629F-4A03-9073-810B11938B6C}"
+        "PackageCode" = "8:{F93DC5F1-2035-43F9-9099-DA0F7267C917}"
         "UpgradeCode" = "8:{C9154284-D2FD-4417-AD65-263C02A91F4D}"
         "AspNetVersion" = "8:4.0.30319.0"
         "RestartWWWService" = "11:FALSE"
@@ -1216,7 +1216,7 @@
         {
             "{5259A561-127C-4D43-A0A1-72F10C7B3BF8}:_9A36B593A673442EB738B206E3E0A30F"
             {
-            "SourcePath" = "8:..\\..\\Xport\\obj\\Release\\CodeChop.exe"
+            "SourcePath" = "8:..\\..\\Xport\\obj\\Debug\\CodeChop.exe"
             "TargetName" = "8:"
             "Tag" = "8:"
             "Folder" = "8:_11769EA4BADA42769284FC681F59A418"

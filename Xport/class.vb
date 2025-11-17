@@ -1004,101 +1004,116 @@ no_string:
             End With
         End Sub
 
+        ' G19: YZ plane, center J,K
         Private Function do_gcode19(ByRef datastring As String,
                             ByVal yo As Single, ByVal yn As Single,
                             ByVal zo As Single, ByVal zn As Single,
                             ByVal jj As Single, ByVal kk As Single,
-                            ByVal g As Single, ByRef str As String) As Integer
+                            ByVal g As Single,
+                            ByRef str As String) As Integer
 
-            Const EPS As Single = 0.0005F
+            Dim ya, za, yb, zb, radius1, radius2 As Single
+            Dim rad1, rad2 As Single
 
-            Dim ya As Single, za As Single, yb As Single, zb As Single
-            Dim radius1 As Single, radius2 As Single, radius As Single
+            ' Arc center in YZ plane
+            yc = CSng(Round(yo + jj, 4))
+            zc = CSng(Round(zo + kk, 4))
 
-            ' Arc center in YZ from J/K (incremental IJK assumed)
-            yc = Round(yo + jj, 4)
-            zc = Round(zo + kk, 4)
+            ' Vectors from center to start and end
+            ya = yo - yc
+            za = zo - zc
+            yb = yn - yc
+            zb = zn - zc
 
-            ya = yo - yc : za = zo - zc
-            yb = yn - yc : zb = zn - zc
+            rad1 = CSng(Sqrt((ya * ya) + (za * za)))
+            rad2 = CSng(Sqrt((yb * yb) + (zb * zb)))
 
-            radius1 = CSng(Round(Sqrt(ya * ya + za * za), 4))
-            radius2 = CSng(Round(Sqrt(yb * yb + zb * zb), 4))
-            If radius1 < EPS Or radius2 < EPS Then Return 1
-
-            ' Radii should match within tolerance; average if close
-            If Math.Abs(radius1 - radius2) > 0.01F Then Return 1
-            radius = (radius1 + radius2) * 0.5F
-
-            start_angle = CSng(mAtan2(za, ya))   ' atan2(z, y)
+            ' SAME pattern as G17, but in YZ
+            start_angle = CSng(mAtan2(za, ya))
             end_angle = CSng(mAtan2(zb, yb))
 
-            ' Normalize to [0, 2π)
-            If start_angle < 0 Then start_angle += CSng(2 * PI)
-            If end_angle < 0 Then end_angle += CSng(2 * PI)
+            radius1 = CSng(Round(rad1, 4))
+            radius2 = CSng(Round(rad2, 4))
 
-            ' Impose direction: G2 = CW looking +X; G3 = CCW
-            If g = 3 Then
-                While end_angle > start_angle
-                    end_angle -= CSng(2 * PI)
-                End While
-            ElseIf g = 2 Then
-                While end_angle < start_angle
-                    end_angle += CSng(2 * PI)
-                End While
-            Else
-                Return 1
+            str = String.Format("ARC G19 - Radius={0:F4} Start angle={1:F4} End angle={2:F4} Y{3:F4} Z{4:F4} X{5:F4} ",
+                        radius1,
+                        start_angle * 57.29578,
+                        end_angle * 57.29578,
+                        yn, zn, ex)   ' ex = final X
+
+            If radius1 = 0 Or radius2 = 0 Then Return 1
+
+            ' IDENTICAL unwrapping rules
+            If g = 2 AndAlso end_angle > start_angle Then
+                end_angle -= CSng(PI * 2)
+            End If
+            If g = 2 AndAlso end_angle = start_angle Then
+                end_angle -= CSng(PI * 2)
+            End If
+            If g = 3 AndAlso start_angle > end_angle Then
+                start_angle -= CSng(PI * 2)
+            End If
+            If g = 3 AndAlso start_angle = end_angle Then
+                start_angle -= CSng(PI * 2)
             End If
 
-            str = String.Format("ARC - R={0:F4} SA={1:F4} EA={2:F4} X{3:F4} Y{4:F4} Z{5:F4}",
-                        radius, start_angle * 57.29578, end_angle * 57.29578, ex, yn, zn)
+            do_arc19(rad1, start_angle, end_angle, yc, zc)
 
-            do_arc19(radius, start_angle, end_angle, yc, zc)
             Return 0
         End Function
 
         Private Sub do_arc19(ByVal radi As Single,
                      ByVal start As Single,
-                     ByVal [end] As Single,
+                     ByVal _end As Single,
                      ByVal j As Single,
                      ByVal k As Single)
 
-            Dim steps As Integer
-            Dim angDiff As Single = [end] - start
-            Dim absDiff As Single = Math.Abs(angDiff)
-
-            ' Target ~5° per chord, clamp segment count
-            steps = Math.Max(1, CInt(Math.Ceiling(absDiff / (CSng(PI) / 36.0F))))
-            steps = Math.Min(180, Math.Max(1, steps))
-
-            Dim dAng As Single = angDiff / steps
-            Dim dx As Single = (ex - sx) / steps
+            ' G19: YZ plane, X is helical axis
+            Dim x, y, z As Single
 
             With draw_data(buff_pnt)
-                ReDim .arc_data(steps)
+                If _end = start Then start += CSng(2D * PI)
 
-                Dim x As Single = sx
-                For i As Integer = 0 To steps - 1
-                    Dim ang As Single = start + i * dAng
-                    Dim y As Single = CSng(Math.Cos(ang) * radi + j)
-                    Dim z As Single = CSng(Math.Sin(ang) * radi + k)
+                Dim arc_data_pnt As Integer = 0
 
-                    .arc_data(i) = New xyz
-                    .arc_data(i).x = x + offset_x(fixture)
-                    .arc_data(i).y = y + offset_y(fixture)
-                    .arc_data(i).z = z
+                start = Round(start, 6)
+                _end = Round(_end, 6)
+                If _end = start Then start += CSng(2 * PI)
 
-                    x += dx
-                Next
+                Dim diff As Single = Round(_end - start, 6)
+                Dim _step As Single = CSng(Round(diff / 30.0!, 10))
+                If _step = 0 Then _step = Sign(diff)
 
-                ' Final endpoint (matches ex,ey,ez exactly)
-                .arc_data(steps) = New xyz
-                .arc_data(steps).x = ex + offset_x(fixture)
-                .arc_data(steps).y = ey + offset_y(fixture)
-                .arc_data(steps).z = ez
+                ' Helical along X (axis not in the YZ plane)
+                Dim x_step As Single = CSng((sx - ex) / (diff / _step))
+                If sx = ex Then x_step = 0
+                x = sx
 
-                .arc = 2   ' keep your existing flagging
+                ReDim Preserve .arc_data(50)
+
+                For _pos@ = start To _end Step _step
+                    y = CSng((Cos(_pos) * radi) + j)
+                    z = CSng((Sin(_pos) * radi) + k)
+
+                    .arc_data(arc_data_pnt) = New xyz
+                    .arc_data(arc_data_pnt).x = x + offset_x(fixture)
+                    .arc_data(arc_data_pnt).y = y + offset_y(fixture)
+                    .arc_data(arc_data_pnt).z = z
+
+                    x -= x_step
+                    arc_data_pnt += 1
+                Next _pos
+
+                ' Force exact end point
+                .arc_data(arc_data_pnt) = New xyz
+                .arc_data(arc_data_pnt).x = ex + offset_x(fixture)
+                .arc_data(arc_data_pnt).y = ey + offset_y(fixture)
+                .arc_data(arc_data_pnt).z = ez
+
+                ReDim Preserve .arc_data(arc_data_pnt)
             End With
+
+            draw_data(buff_pnt).arc = 2
         End Sub
 
 

@@ -3,6 +3,8 @@
 // the structure is as follows
 // File type :*.fileExtinsion
 //Example CNC:*.NC
+CNC :*.NC
+CNC :*.nc
 3D Print :*.gcode
 TEXT :*.TXT
 All Files :*.*
