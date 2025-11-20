@@ -892,12 +892,12 @@ Public Class frmMain
         Dim f As String = File.ReadAllText(Application.StartupPath + "\file_filter.txt")
         If f.Length = 0 Then MsgBox("Can find File_filter.txt file!", MsgBoxStyle.Exclamation, "File Missing Error")
         f = Microsoft.VisualBasic.Replace(f, vbCrLf, vbLf)
-        Dim a = f.Split(vbLf)
+        Dim a = f.Split(CChar(vbLf))
 
         For Each s In a
             If s.Length <= 1 Then GoTo next_
             If InStr(s, "//") > 0 Then GoTo next_
-            Dim x = s.Split(":")
+            Dim x = s.Split(CChar(":"))
             filter += x(0) + " (" + x(1) + ")" + "|" + x(1) + "|"
 next_:
         Next
@@ -2073,17 +2073,17 @@ no_data:
     End Sub
 
     Private Sub create_letters()
-        nav_front(0, 0, 255)
+        nav_front(0, 255, 0)
 
-        nav_back(180, 0, 0)
+        nav_back(0, 255, 0)
 
-        nav_top(180, 180, 180)
+        nav_top(0, 0, 255)
 
-        nav_bot(180, 0, 127)
+        nav_bot(0, 0, 255)
 
-        nav_right(180, 180, 0)
+        nav_right(255, 0, 0)
 
-        nav_left(0, 180, 0)
+        nav_left(255, 0, 0)
 
     End Sub
 
@@ -2141,10 +2141,18 @@ no_data:
         GL.LineWidth(1.0!)
         Dim oldColor As Color = Color.Empty
         Dim stripOpen As Boolean = False
-
+        Dim rapid_color As Color = Color.FromArgb(150, 150, 150)
+        Dim conture_color As Color = Color.FromArgb(0, 0, 255)
+        Dim just_z_color As Color = Color.FromArgb(0, 255, 255)
         For El = 0 To _end
             ' color, filtering, etc. (unchanged)
-
+            If draw_data(El).just_z Then
+                co = just_z_color
+            ElseIf draw_data(El).rapid Then
+                co = rapid_color
+            Else co = conture_color
+            End If
+            GL.Color3(co.R / 255.0!, co.G / 255.0!, co.B / 255.0!)
             If draw_data(El).arc > 0 Then
                 ' ARC as strip
                 If Not stripOpen Then
@@ -2157,7 +2165,7 @@ no_data:
                 Dim ay As Single = CSng((draw_data(El).arc_data(0).y - wcoY) / s)
                 Dim az As Single = CSng((draw_data(El).arc_data(0).z - wcoZ) / s)
                 GL.Vertex3(ax, az, -ay)
-                total_lines_drawn += 1
+                total_lines_drawn += CUInt(1)
 
                 ' Remaining points
                 For crc_cnt = 1 To draw_data(El).arc_data.Length - 1
@@ -2186,7 +2194,7 @@ no_data:
                 GL.Vertex3(sx, sz, -sy)
                 GL.Vertex3(ex, ez, -ey)
                 GL.End()
-                total_lines_drawn += 1
+                total_lines_drawn += CUInt(1)
             End If
         Next
 
@@ -2195,8 +2203,8 @@ no_data:
         If draw_points Then
             GL.PointSize(3.0!)
             GL.Begin(PrimitiveType.Points)
-            GL.Color3(0.0, 0.3, 1.0)
-            For El = 0 To _end - 1
+            GL.Color3(1.0, 1.0, 1.0)
+            For El = 0 To _end - CUInt(1)
                 If draw_data(El).valid Then
                     If NO_RAPIDs AndAlso draw_data(El).rapid Then Continue For
                     Dim px As Single = CSng((draw_data(El).ex - wcoX) / s)
@@ -2711,23 +2719,43 @@ no_data:
         GL.Disable(EnableCap.Lighting)
         GL.LineWidth(1)
         GL.Begin(PrimitiveType.Lines)
-        GL.Color3(0.64D * _grid_multi, 0.68D * _grid_multi, _grid_multi)
-        For z As Single = p To p * 100 Step p
-            GL.Vertex3(-p * 100, 0.0F, z)
-            GL.Vertex3(p * 100, 0.0F, z)
+        Dim maxRange As Single = p * 10.0F
+
+        Dim baseR As Single = CSng(0.64 * _grid_multi)
+        Dim baseG As Single = CSng(0.68 * _grid_multi)
+        Dim baseB As Single = CSng(1.0 * _grid_multi)
+
+
+        ' Z lines (X varies)
+        For z As Single = p To p * 100.0F Step p
+            Dim f As Single = GridFactor(Math.Abs(z), maxRange)
+            GL.Color3(baseR * f, baseG * f, baseB * f)
+            GL.Vertex3(-maxRange, 0.0F, z)
+            GL.Vertex3(maxRange, 0.0F, z)
         Next
-        For z As Single = -p * 100 To -p Step p
-            GL.Vertex3(-p * 100, 0.0F, z)
-            GL.Vertex3(p * 100, 0.0F, z)
+
+        For z As Single = -p * 100.0F To -p Step p
+            Dim f As Single = GridFactor(Math.Abs(z), maxRange)
+            GL.Color3(baseR * f, baseG * f, baseB * f)
+            GL.Vertex3(-maxRange, 0.0F, z)
+            GL.Vertex3(maxRange, 0.0F, z)
         Next
-        For x As Single = p To p * 100 Step p
-            GL.Vertex3(x, 0.0F, p * 100)
-            GL.Vertex3(x, 0.0F, -p * 100)
+
+        ' X lines (Z varies)
+        For x As Single = p To p * 100.0F Step p
+            Dim f As Single = GridFactor(Math.Abs(x), maxRange)
+            GL.Color3(baseR * f, baseG * f, baseB * f)
+            GL.Vertex3(x, 0.0F, maxRange)
+            GL.Vertex3(x, 0.0F, -maxRange)
         Next
-        For x As Single = -p * 100 To -p Step p
-            GL.Vertex3(x, 0.0F, p * 100)
-            GL.Vertex3(x, 0.0F, -p * 100)
+
+        For x As Single = -p * 100.0F To -p Step p
+            Dim f As Single = GridFactor(Math.Abs(x), maxRange)
+            GL.Color3(baseR * f, baseG * f, baseB * f)
+            GL.Vertex3(x, 0.0F, maxRange)
+            GL.Vertex3(x, 0.0F, -maxRange)
         Next
+
         GL.End()
         GL.LineWidth(1.0!)
         GL.Color3(0.6F, 0.6F, 0.6F)
@@ -2745,22 +2773,42 @@ no_data:
         GL.LineWidth(1)
 
         GL.Begin(PrimitiveType.Lines)
-        'z+ red
-        GL.Color3(1.0F, 0.0F, 0.0F)
-        GL.Vertex3(0.0F, 0.0F, p)
-        GL.Vertex3(0.0F, 0.0F, p * 100.0F)
-        'z- blue
+
+        '===== Z AXIS (Blue) — UP =====
+        'z+ (up)
         GL.Color3(0.0F, 0.0F, 1.0F)
-        GL.Vertex3(0.0F, 0.0F, -p)
-        GL.Vertex3(0.0F, 0.0F, -p * 100.0F)
-        'x+ yellow
-        GL.Color3(1.0F, 1.0F, 0.0F)
-        GL.Vertex3(p, 0.0F, 0.0F)
+        GL.Vertex3(0.0F, 0.0F, 0.0F)
+        GL.Vertex3(0.0F, p * 100.0F, 0.0F)
+
+        'z- (down)
+        GL.Color3(0.0F, 0.0F, 0.5F)
+        GL.Vertex3(0.0F, 0.0F, 0.0F)
+        GL.Vertex3(0.0F, -p * 100.0F, 0.0F)
+
+
+        '===== X AXIS (Red) — Right/Left =====
+        'x+
+        GL.Color3(1.0F, 0.0F, 0.0F)
+        GL.Vertex3(0.0F, 0.0F, 0.0F)
         GL.Vertex3(p * 100.0F, 0.0F, 0.0F)
-        'x- green
-        GL.Color3(0.0F, 1.0F, 0.0F)
-        GL.Vertex3(-p, 0.0F, 0.0F)
+
+        'x-
+        GL.Color3(0.5F, 0.0F, 0.0F)
+        GL.Vertex3(0.0F, 0.0F, 0.0F)
         GL.Vertex3(-p * 100.0F, 0.0F, 0.0F)
+
+
+        '===== Y AXIS (Green) — Forward/Back (your choice) =====
+        'y+
+        GL.Color3(0.0F, 1.0F, 0.0F)
+        GL.Vertex3(0.0F, 0.0F, 0.0F)
+        GL.Vertex3(0.0F, 0.0F, p * 100.0F)
+
+        'y-
+        GL.Color3(0.0F, 0.5F, 0.0F)
+        GL.Vertex3(0.0F, 0.0F, 0.0F)
+        GL.Vertex3(0.0F, 0.0F, -p * 100.0F)
+
         '---------
         GL.End()
         GL.Enable(EnableCap.Lighting)
@@ -2768,6 +2816,12 @@ no_data:
 
 
     End Sub
+    ' Helper: 1.0 at origin, 0.0 at maxRange
+    Private Function GridFactor(dist As Single, maxRange As Single) As Single
+        Dim t As Single = 1.0F - (dist / maxRange)
+        If t < 0.0F Then t = 0.0F
+        Return t
+    End Function
 
     'Mouse events -------------------------------------------------------------------- Mouse events
     Public Sub GLControl1_MouseDown(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs)
