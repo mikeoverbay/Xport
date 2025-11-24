@@ -25,7 +25,7 @@
     Public Sub _btn_new()
         'new file
 
-        If frmMain.btn_save_as.Enabled Then
+        If frmMain.RTB1.Modified = True Then   ' mark as “clean”
             Select Case MsgBox("Save Changes?", MsgBoxStyle.YesNoCancel, "Save?")
                 Case MsgBoxResult.Yes
                     Try
@@ -52,6 +52,22 @@
     End Sub
 
     Public Sub _btn_open()
+
+        If frmMain.RTB1.Modified Then   ' mark as “clean”
+            Select Case MsgBox("Save Changes?", MsgBoxStyle.YesNoCancel, "Save?")
+                Case MsgBoxResult.Yes
+                    Try
+                        System.IO.File.WriteAllText(frmMain.path, frmMain.RTB1.Text)
+                    Catch ex As Exception
+                        MsgBox("Error.. " & vbCrLf & ex.Message, MsgBoxStyle.Exclamation, "File Read Error..")
+                        Return
+                    End Try
+                Case MsgBoxResult.Cancel
+                    Return
+                Case MsgBoxResult.No
+            End Select
+
+        End If
         zoom_window.TopMost = False
         frmMain.OpenFileDialog1.FilterIndex = My.Settings.open1_fliter_index
         frmMain.FILE_PROCESS_MODE = False

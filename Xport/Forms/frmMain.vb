@@ -315,7 +315,6 @@ Public Class frmMain
             "Version: " & GL.GetString(StringName.Version)
         RTB1.Text += vbCrLf + "- - - - - - - - - - - -" + vbCrLf + info
 
-
         Dim VersionInfo As Version = System.Reflection.Assembly.GetExecutingAssembly.GetName.Version
         Dim ver As String = VersionInfo.Major & "." & VersionInfo.Minor & "." & VersionInfo.Revision
         RTB1.Text += vbCrLf + "- - - - - - - - - - - -" + vbCrLf +
@@ -368,6 +367,7 @@ Public Class frmMain
         Application.DoEvents()
         DrawScene()
         Application.DoEvents()
+        RTB1.Modified = False
 
 
     End Sub
@@ -917,6 +917,8 @@ next_:
             clear_arrays()
             RTB1.Text = ""
             RTB1.Rtf = ""
+            RTB1.Modified = False   ' mark as “clean”
+
             'Splitter.Invalidate()
             RTB1.Invalidate()
             Application.DoEvents()
@@ -2037,7 +2039,7 @@ no_data:
         MathHelper.DegreesToRadians(zoom_factor),
         aspectRatio,
         near_clip_plane,
-        100.0F
+        10000.0F
     )
         GL.LoadMatrix(perspective)
 
@@ -2230,7 +2232,7 @@ no_data:
         End If
         drawing_flag = True
         If zoom_window.Visible Then
-            Wgl.wglMakeCurrent(zoom_hDC, zoom_hRC)
+            GLControl2.MakeCurrent()
             Resize_zoom()
             DrawSceneZoom()
         End If
@@ -2245,7 +2247,17 @@ no_data:
         draw_ball = False
         gl_lighting = True
 
-        Wgl.wglMakeCurrent(zoom_hDC, zoom_hRC)
+        ' Prefer managed GLControl2 context; fallback to native WGL if necessary and valid.
+        Try
+            If GLControl2 IsNot Nothing Then
+                GLControl2.MakeCurrent()
+            ElseIf zoom_hDC <> IntPtr.Zero AndAlso zoom_hRC <> IntPtr.Zero Then
+                Wgl.wglMakeCurrent(zoom_hDC, zoom_hRC)
+            End If
+        Catch ex As Exception
+            ' If context switch fails, optionally log or ignore and continue.
+            Debug.WriteLine("Failed to make zoom GL context current: " & ex.Message)
+        End Try
         gl_set_lights()
         ViewPerspectiveZoom()
 
