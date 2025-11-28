@@ -40,14 +40,12 @@
             End Select
 
         End If
-        frmMain.RTB1.Text = ""
-        frmMain.path = ""
+        frmGcodeMaker.Show()
+
         frmMain.delete_stl()
         frmMain.clear_selection()
-        frmMain.clear_arrays()
-        frmMain.make_plotlist()
         frmMain.draw_all()
-        frmMain.disable_btns()
+        'frmMain.disable_btns()
         frmMain.DrawScene()
     End Sub
 

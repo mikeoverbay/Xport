@@ -153,7 +153,7 @@ Module classes
             .Line = rawLine,
             .IsGoto = codeOnly.Contains("GOTO"),
             .HasVTLCN = codeOnly.Contains("VTLCN"),
-            .IsCommented = codeOnly.TrimStart().StartsWith(";"),
+            .IsCommented = (codeOnly.TrimStart().StartsWith(";") Or codeOnly.TrimStart().StartsWith("(")),
             .GCodes = New List(Of Single),
             .Axes = New Dictionary(Of String, Single)(StringComparer.OrdinalIgnoreCase),
             .isNew = {False, False, False, False, False, False, False, False, False, False, False}

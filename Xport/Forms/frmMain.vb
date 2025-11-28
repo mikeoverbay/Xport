@@ -628,14 +628,15 @@ Public Class frmMain
         ToolTip1.SetToolTip(btn_free_spin, "Free Spin Plot")
         AddHandler btn_free_spin.MouseClick, AddressOf _btn_free_spin
         'btn_com_con
-        btn_com_con.Checked = False
-        btn_com_con.mouse_in = False
-        btn_com_con.BackgroundImage = My.Resources.D_RND_BTN_M_UP
-        btn_com_con.Image = My.Resources.WirelessConnection
-        btn_com_con.Location = New Point(3 + (spacer1.Width * 1) + (32 * 12), 3)
-        top_bar_plot_controls.Controls.Add(btn_com_con)
-        ToolTip1.SetToolTip(btn_com_con, "Open Com Con")
-        AddHandler btn_com_con.MouseClick, AddressOf _btn_com_con
+        'FUNCTION DISABLED FOR NOW
+        'btn_com_con.Checked = False
+        'btn_com_con.mouse_in = False
+        'btn_com_con.BackgroundImage = My.Resources.D_RND_BTN_M_UP
+        'btn_com_con.Image = My.Resources.WirelessConnection
+        'btn_com_con.Location = New Point(3 + (spacer1.Width * 1) + (32 * 12), 3)
+        'top_bar_plot_controls.Controls.Add(btn_com_con)
+        'ToolTip1.SetToolTip(btn_com_con, "Open Com Con")
+        'AddHandler btn_com_con.MouseClick, AddressOf _btn_com_con
     End Sub
     Private Sub add_plot_bar_buttons()
         plot_toolbar.Controls.Clear()
@@ -1713,9 +1714,8 @@ no_text:
         GL.Clear(ClearBufferMask.ColorBufferBit Or ClearBufferMask.DepthBufferBit)
         GL.PushMatrix()
         If zoom Then
-            Wgl.wglMakeCurrent(zoom_hDC, zoom_hRC)
+            GLControl2.MakeCurrent()
             ViewPerspectiveZoom()
-            current_hDC = zoom_hDC
             set_eyes()
             gl_set_lights()
         Else

@@ -148,17 +148,23 @@
     <Import Include="Tao.Platform.Windows" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="APIs.vb" />
-    <Compile Include="ApplicationEvents.vb" />
-    <Compile Include="class.vb">
+    <Compile Include="Forms\frmGcodeMaker.Designer.vb">
+      <DependentUpon>frmGcodeMaker.vb</DependentUpon>
     </Compile>
-    <Compile Include="Class1.vb">
+    <Compile Include="Forms\frmGcodeMaker.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modules\APIs.vb" />
+    <Compile Include="Modules\ApplicationEvents.vb" />
+    <Compile Include="Modules\class.vb">
+    </Compile>
+    <Compile Include="Modules\Class1.vb">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="buttons.Designer.vb">
+    <Compile Include="Modules\buttons.Designer.vb">
       <DependentUpon>buttons.vb</DependentUpon>
     </Compile>
-    <Compile Include="buttons.vb">
+    <Compile Include="Modules\buttons.vb">
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="Forms\Find.Designer.vb">
@@ -207,6 +213,9 @@
     </Compile>
     <Compile Include="Menu_Events.vb">
     </Compile>
+    <Compile Include="Forms\MathTextBox.vb">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -251,6 +260,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\frmControl.resx">
       <DependentUpon>frmControl.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmGcodeMaker.resx">
+      <DependentUpon>frmGcodeMaker.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\set_coord_tb.resx">
       <DependentUpon>set_coord_tb.vb</DependentUpon>
